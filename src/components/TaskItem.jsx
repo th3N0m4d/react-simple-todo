@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Button from 'react-bootstrap/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faTrash } from '@fortawesome/free-solid-svg-icons'
 
@@ -14,18 +15,6 @@ const defaultProps = {
   name: 'N/A',
   author: 'Anonymous'
 }
-
-export const ButtonRemove = ({ onClick }) => (
-  <button className='border-0 btn-transition btn btn-outline-danger' onClick={onClick}>
-    <FontAwesomeIcon icon={faTrash} />
-  </button>
-)
-
-export const ButtonConfirm = ({ onClick }) => (
-  <button className='border-0 btn-transition btn btn-outline-success' onClick={onClick}>
-    <FontAwesomeIcon icon={faCheck} />
-  </button>
-)
 
 const TaskItem = ({
   author,
@@ -50,8 +39,12 @@ const TaskItem = ({
           <div className='widget-subheading'><i>By {author}</i></div>
         </div>
         <div className='widget-content-right'>
-          <ButtonConfirm onClick={onConfirm} />
-          <ButtonRemove onClick={onRemove} />
+          <Button variant='outline-success' onClick={onConfirm}>
+            <FontAwesomeIcon icon={faCheck} />
+          </Button>
+          <Button variant='outline-danger' onClick={onRemove}>
+            <FontAwesomeIcon icon={faTrash} />
+          </Button>
         </div>
       </div>
     </div>
