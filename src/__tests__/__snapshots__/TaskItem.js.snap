@@ -1,0 +1,301 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskItem should display author's name 1`] = `
+<li
+  className="list-group-item"
+>
+  <div
+    className="todo-indicator bg-warning"
+  />
+  <div
+    className="widget-content p-0"
+  >
+    <div
+      className="widget-content-wrapper"
+    >
+      <div
+        className="widget-content-left mr-2"
+      >
+        <div
+          className="custom-checkbox custom-control"
+        >
+          <input
+            className="custom-control-input"
+            id="exampleCustomCheckbox12"
+            type="checkbox"
+          />
+          <label
+            className="custom-control-label"
+            htmlFor="exampleCustomCheckbox12"
+          >
+             
+          </label>
+        </div>
+      </div>
+      <div
+        className="widget-content-left"
+      >
+        <div
+          className="widget-heading"
+        >
+          N/A
+        </div>
+        <div
+          className="widget-subheading"
+        >
+          <i>
+            By 
+            Bob
+          </i>
+        </div>
+      </div>
+      <div
+        className="widget-content-right"
+      >
+        <button
+          className="border-0 btn-transition btn btn-outline-success"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-check fa-w-16 "
+            data-icon="check"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </button>
+        <button
+          className="border-0 btn-transition btn btn-outline-danger"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-trash fa-w-14 "
+            data-icon="trash"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</li>
+`;
+
+exports[`TaskItem should display task name 1`] = `
+<li
+  className="list-group-item"
+>
+  <div
+    className="todo-indicator bg-warning"
+  />
+  <div
+    className="widget-content p-0"
+  >
+    <div
+      className="widget-content-wrapper"
+    >
+      <div
+        className="widget-content-left mr-2"
+      >
+        <div
+          className="custom-checkbox custom-control"
+        >
+          <input
+            className="custom-control-input"
+            id="exampleCustomCheckbox12"
+            type="checkbox"
+          />
+          <label
+            className="custom-control-label"
+            htmlFor="exampleCustomCheckbox12"
+          >
+             
+          </label>
+        </div>
+      </div>
+      <div
+        className="widget-content-left"
+      >
+        <div
+          className="widget-heading"
+        >
+          Buy wine
+        </div>
+        <div
+          className="widget-subheading"
+        >
+          <i>
+            By 
+            Anonymous
+          </i>
+        </div>
+      </div>
+      <div
+        className="widget-content-right"
+      >
+        <button
+          className="border-0 btn-transition btn btn-outline-success"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-check fa-w-16 "
+            data-icon="check"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </button>
+        <button
+          className="border-0 btn-transition btn btn-outline-danger"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-trash fa-w-14 "
+            data-icon="trash"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</li>
+`;
+
+exports[`TaskItem should render component correctly 1`] = `
+<li
+  className="list-group-item"
+>
+  <div
+    className="todo-indicator bg-warning"
+  />
+  <div
+    className="widget-content p-0"
+  >
+    <div
+      className="widget-content-wrapper"
+    >
+      <div
+        className="widget-content-left mr-2"
+      >
+        <div
+          className="custom-checkbox custom-control"
+        >
+          <input
+            className="custom-control-input"
+            id="exampleCustomCheckbox12"
+            type="checkbox"
+          />
+          <label
+            className="custom-control-label"
+            htmlFor="exampleCustomCheckbox12"
+          >
+             
+          </label>
+        </div>
+      </div>
+      <div
+        className="widget-content-left"
+      >
+        <div
+          className="widget-heading"
+        >
+          N/A
+        </div>
+        <div
+          className="widget-subheading"
+        >
+          <i>
+            By 
+            Anonymous
+          </i>
+        </div>
+      </div>
+      <div
+        className="widget-content-right"
+      >
+        <button
+          className="border-0 btn-transition btn btn-outline-success"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-check fa-w-16 "
+            data-icon="check"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </button>
+        <button
+          className="border-0 btn-transition btn btn-outline-danger"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-trash fa-w-14 "
+            data-icon="trash"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</li>
+`;
