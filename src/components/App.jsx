@@ -17,7 +17,7 @@ const App = () => (
               <div className='ps-content'>
                 <ul className=' list-group list-group-flush'>
 
-                  <TaskItem />
+                  <TaskItem completed />
 
                 </ul>
               </div>

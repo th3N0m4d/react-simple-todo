@@ -113,6 +113,10 @@ i {
     align-items: center
 }
 
+.widget-heading--completed {
+    text-decoration: line-through;
+}
+
 .widget-content .widget-content-wrapper {
     display: flex;
     flex: 1;

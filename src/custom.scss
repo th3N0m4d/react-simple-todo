@@ -2,6 +2,6 @@
 /* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";
 
-.btn-outline-success, .btn-outline-danger {
+button[class*="btn-outline"] {
     border: none;
 }
