@@ -48,6 +48,12 @@
       "dist/**"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test",
+      "pre-push": "yarn test"
+    }
+  },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
@@ -78,6 +84,7 @@
     "@fortawesome/react-fontawesome": "^0.1.9",
     "bootstrap": "^4.4.1",
     "classnames": "^2.2.6",
+    "husky": "^4.2.3",
     "prop-types": "^15.7.2",
     "ramda": "^0.27.0",
     "react": "^16.13.1",
