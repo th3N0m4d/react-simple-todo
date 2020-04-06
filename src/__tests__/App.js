@@ -1,14 +1,26 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import renderer from 'react-test-renderer'
 
 import App from '../components/App'
 
-describe('App', () => {
-  test('should render', () => {
-    const wrapper = shallow(
-      <App />
-    )
+const expectToMatchSnapshot = (component) => {
+  expect(renderer.create(component).toJSON()).toMatchSnapshot()
+}
 
-    expect(wrapper.exists()).toBeTruthy()
+const createApp = (props = {}) => (
+  <App {...props} />
+)
+
+describe('App', () => {
+  it('should render', () => {
+    expectToMatchSnapshot(createApp())
+  })
+
+  it('should render tasks', () => {
+    const tasks = [
+      { id: 0, name: 'Buy wine' },
+      { id: 1, name: 'Buy cheese' }
+    ]
+    expectToMatchSnapshot(createApp({ tasks }))
   })
 })

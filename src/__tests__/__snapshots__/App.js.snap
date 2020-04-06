@@ -1,0 +1,1419 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render 1`] = `
+<div
+  className="justify-content-center container row"
+>
+  <div
+    className="col-md-8"
+  >
+    <div
+      className="card"
+    >
+      <div
+        className="card-header"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-tasks fa-w-16 "
+          data-icon="tasks"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M139.61 35.5a12 12 0 0 0-17 0L58.93 98.81l-22.7-22.12a12 12 0 0 0-17 0L3.53 92.41a12 12 0 0 0 0 17l47.59 47.4a12.78 12.78 0 0 0 17.61 0l15.59-15.62L156.52 69a12.09 12.09 0 0 0 .09-17zm0 159.19a12 12 0 0 0-17 0l-63.68 63.72-22.7-22.1a12 12 0 0 0-17 0L3.53 252a12 12 0 0 0 0 17L51 316.5a12.77 12.77 0 0 0 17.6 0l15.7-15.69 72.2-72.22a12 12 0 0 0 .09-16.9zM64 368c-26.49 0-48.59 21.5-48.59 48S37.53 464 64 464a48 48 0 0 0 0-96zm432 16H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+         Task Lists
+      </div>
+      <div
+        className="card-body"
+      >
+        <div
+          className="scroll-area-sm"
+        >
+          <div
+            className="ps-show-limits"
+          >
+            <div
+              className="ps ps--active-y"
+              style={
+                Object {
+                  "position": "static",
+                }
+              }
+            >
+              <div
+                className="ps-content"
+              >
+                <div
+                  className="list-group list-group-flush"
+                  onKeyDown={[Function]}
+                >
+                  <div
+                    className="list-group-item"
+                    data-rb-event-key={null}
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="todo-indicator bg-warning"
+                    />
+                    <div
+                      className="widget-content p-0"
+                    >
+                      <div
+                        className="widget-content-wrapper"
+                      >
+                        <div
+                          className="widget-content-left mr-2"
+                        >
+                          <div
+                            className="custom-checkbox custom-control"
+                          >
+                            <input
+                              className="custom-control-input"
+                              id="exampleCustomCheckbox12"
+                              type="checkbox"
+                            />
+                            <label
+                              className="custom-control-label"
+                              htmlFor="exampleCustomCheckbox12"
+                            >
+                               
+                            </label>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-left"
+                        >
+                          <div
+                            className="widget-heading"
+                          >
+                            N/A
+                          </div>
+                          <div
+                            className="widget-subheading"
+                          >
+                            <i>
+                              By 
+                              Anonymous
+                            </i>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-right"
+                        >
+                          <button
+                            className="btn btn-outline-success"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-check fa-w-16 "
+                              data-icon="check"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 512 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                          <button
+                            className="btn btn-outline-danger"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-trash fa-w-14 "
+                              data-icon="trash"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 448 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="list-group-item"
+                    data-rb-event-key={null}
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="todo-indicator bg-warning"
+                    />
+                    <div
+                      className="widget-content p-0"
+                    >
+                      <div
+                        className="widget-content-wrapper"
+                      >
+                        <div
+                          className="widget-content-left mr-2"
+                        >
+                          <div
+                            className="custom-checkbox custom-control"
+                          >
+                            <input
+                              className="custom-control-input"
+                              id="exampleCustomCheckbox12"
+                              type="checkbox"
+                            />
+                            <label
+                              className="custom-control-label"
+                              htmlFor="exampleCustomCheckbox12"
+                            >
+                               
+                            </label>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-left"
+                        >
+                          <div
+                            className="widget-heading widget-heading--completed"
+                          >
+                            N/A
+                          </div>
+                          <div
+                            className="widget-subheading"
+                          >
+                            <i>
+                              By 
+                              Anonymous
+                            </i>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-right"
+                        >
+                          <button
+                            className="btn btn-outline-info"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-undo fa-w-16 "
+                              data-icon="undo"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 512 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M212.333 224.333H12c-6.627 0-12-5.373-12-12V12C0 5.373 5.373 0 12 0h48c6.627 0 12 5.373 12 12v78.112C117.773 39.279 184.26 7.47 258.175 8.007c136.906.994 246.448 111.623 246.157 248.532C504.041 393.258 393.12 504 256.333 504c-64.089 0-122.496-24.313-166.51-64.215-5.099-4.622-5.334-12.554-.467-17.42l33.967-33.967c4.474-4.474 11.662-4.717 16.401-.525C170.76 415.336 211.58 432 256.333 432c97.268 0 176-78.716 176-176 0-97.267-78.716-176-176-176-58.496 0-110.28 28.476-142.274 72.333h98.274c6.627 0 12 5.373 12 12v48c0 6.627-5.373 12-12 12z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                          <button
+                            className="btn btn-outline-danger"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-trash fa-w-14 "
+                              data-icon="trash"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 448 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="list-group-item"
+                    data-rb-event-key={null}
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="todo-indicator bg-warning"
+                    />
+                    <div
+                      className="widget-content p-0"
+                    >
+                      <div
+                        className="widget-content-wrapper"
+                      >
+                        <div
+                          className="widget-content-left mr-2"
+                        >
+                          <div
+                            className="custom-checkbox custom-control"
+                          >
+                            <input
+                              className="custom-control-input"
+                              id="exampleCustomCheckbox12"
+                              type="checkbox"
+                            />
+                            <label
+                              className="custom-control-label"
+                              htmlFor="exampleCustomCheckbox12"
+                            >
+                               
+                            </label>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-left"
+                        >
+                          <div
+                            className="widget-heading widget-heading--completed"
+                          >
+                            N/A
+                          </div>
+                          <div
+                            className="widget-subheading"
+                          >
+                            <i>
+                              By 
+                              Anonymous
+                            </i>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-right"
+                        >
+                          <button
+                            className="btn btn-outline-info"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-undo fa-w-16 "
+                              data-icon="undo"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 512 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M212.333 224.333H12c-6.627 0-12-5.373-12-12V12C0 5.373 5.373 0 12 0h48c6.627 0 12 5.373 12 12v78.112C117.773 39.279 184.26 7.47 258.175 8.007c136.906.994 246.448 111.623 246.157 248.532C504.041 393.258 393.12 504 256.333 504c-64.089 0-122.496-24.313-166.51-64.215-5.099-4.622-5.334-12.554-.467-17.42l33.967-33.967c4.474-4.474 11.662-4.717 16.401-.525C170.76 415.336 211.58 432 256.333 432c97.268 0 176-78.716 176-176 0-97.267-78.716-176-176-176-58.496 0-110.28 28.476-142.274 72.333h98.274c6.627 0 12 5.373 12 12v48c0 6.627-5.373 12-12 12z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                          <button
+                            className="btn btn-outline-danger"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-trash fa-w-14 "
+                              data-icon="trash"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 448 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="list-group-item"
+                    data-rb-event-key={null}
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="todo-indicator bg-warning"
+                    />
+                    <div
+                      className="widget-content p-0"
+                    >
+                      <div
+                        className="widget-content-wrapper"
+                      >
+                        <div
+                          className="widget-content-left mr-2"
+                        >
+                          <div
+                            className="custom-checkbox custom-control"
+                          >
+                            <input
+                              className="custom-control-input"
+                              id="exampleCustomCheckbox12"
+                              type="checkbox"
+                            />
+                            <label
+                              className="custom-control-label"
+                              htmlFor="exampleCustomCheckbox12"
+                            >
+                               
+                            </label>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-left"
+                        >
+                          <div
+                            className="widget-heading widget-heading--completed"
+                          >
+                            N/A
+                          </div>
+                          <div
+                            className="widget-subheading"
+                          >
+                            <i>
+                              By 
+                              Anonymous
+                            </i>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-right"
+                        >
+                          <button
+                            className="btn btn-outline-info"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-undo fa-w-16 "
+                              data-icon="undo"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 512 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M212.333 224.333H12c-6.627 0-12-5.373-12-12V12C0 5.373 5.373 0 12 0h48c6.627 0 12 5.373 12 12v78.112C117.773 39.279 184.26 7.47 258.175 8.007c136.906.994 246.448 111.623 246.157 248.532C504.041 393.258 393.12 504 256.333 504c-64.089 0-122.496-24.313-166.51-64.215-5.099-4.622-5.334-12.554-.467-17.42l33.967-33.967c4.474-4.474 11.662-4.717 16.401-.525C170.76 415.336 211.58 432 256.333 432c97.268 0 176-78.716 176-176 0-97.267-78.716-176-176-176-58.496 0-110.28 28.476-142.274 72.333h98.274c6.627 0 12 5.373 12 12v48c0 6.627-5.373 12-12 12z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                          <button
+                            className="btn btn-outline-danger"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-trash fa-w-14 "
+                              data-icon="trash"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 448 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="list-group-item"
+                    data-rb-event-key={null}
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="todo-indicator bg-warning"
+                    />
+                    <div
+                      className="widget-content p-0"
+                    >
+                      <div
+                        className="widget-content-wrapper"
+                      >
+                        <div
+                          className="widget-content-left mr-2"
+                        >
+                          <div
+                            className="custom-checkbox custom-control"
+                          >
+                            <input
+                              className="custom-control-input"
+                              id="exampleCustomCheckbox12"
+                              type="checkbox"
+                            />
+                            <label
+                              className="custom-control-label"
+                              htmlFor="exampleCustomCheckbox12"
+                            >
+                               
+                            </label>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-left"
+                        >
+                          <div
+                            className="widget-heading widget-heading--completed"
+                          >
+                            N/A
+                          </div>
+                          <div
+                            className="widget-subheading"
+                          >
+                            <i>
+                              By 
+                              Anonymous
+                            </i>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-right"
+                        >
+                          <button
+                            className="btn btn-outline-info"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-undo fa-w-16 "
+                              data-icon="undo"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 512 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M212.333 224.333H12c-6.627 0-12-5.373-12-12V12C0 5.373 5.373 0 12 0h48c6.627 0 12 5.373 12 12v78.112C117.773 39.279 184.26 7.47 258.175 8.007c136.906.994 246.448 111.623 246.157 248.532C504.041 393.258 393.12 504 256.333 504c-64.089 0-122.496-24.313-166.51-64.215-5.099-4.622-5.334-12.554-.467-17.42l33.967-33.967c4.474-4.474 11.662-4.717 16.401-.525C170.76 415.336 211.58 432 256.333 432c97.268 0 176-78.716 176-176 0-97.267-78.716-176-176-176-58.496 0-110.28 28.476-142.274 72.333h98.274c6.627 0 12 5.373 12 12v48c0 6.627-5.373 12-12 12z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                          <button
+                            className="btn btn-outline-danger"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-trash fa-w-14 "
+                              data-icon="trash"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 448 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="list-group-item"
+                    data-rb-event-key={null}
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="todo-indicator bg-warning"
+                    />
+                    <div
+                      className="widget-content p-0"
+                    >
+                      <div
+                        className="widget-content-wrapper"
+                      >
+                        <div
+                          className="widget-content-left mr-2"
+                        >
+                          <div
+                            className="custom-checkbox custom-control"
+                          >
+                            <input
+                              className="custom-control-input"
+                              id="exampleCustomCheckbox12"
+                              type="checkbox"
+                            />
+                            <label
+                              className="custom-control-label"
+                              htmlFor="exampleCustomCheckbox12"
+                            >
+                               
+                            </label>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-left"
+                        >
+                          <div
+                            className="widget-heading widget-heading--completed"
+                          >
+                            N/A
+                          </div>
+                          <div
+                            className="widget-subheading"
+                          >
+                            <i>
+                              By 
+                              Anonymous
+                            </i>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-right"
+                        >
+                          <button
+                            className="btn btn-outline-info"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-undo fa-w-16 "
+                              data-icon="undo"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 512 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M212.333 224.333H12c-6.627 0-12-5.373-12-12V12C0 5.373 5.373 0 12 0h48c6.627 0 12 5.373 12 12v78.112C117.773 39.279 184.26 7.47 258.175 8.007c136.906.994 246.448 111.623 246.157 248.532C504.041 393.258 393.12 504 256.333 504c-64.089 0-122.496-24.313-166.51-64.215-5.099-4.622-5.334-12.554-.467-17.42l33.967-33.967c4.474-4.474 11.662-4.717 16.401-.525C170.76 415.336 211.58 432 256.333 432c97.268 0 176-78.716 176-176 0-97.267-78.716-176-176-176-58.496 0-110.28 28.476-142.274 72.333h98.274c6.627 0 12 5.373 12 12v48c0 6.627-5.373 12-12 12z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                          <button
+                            className="btn btn-outline-danger"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-trash fa-w-14 "
+                              data-icon="trash"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 448 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="text-right card-footer"
+        >
+          <button
+            className="btn btn-link"
+            disabled={false}
+            type="button"
+          >
+            Cancel
+          </button>
+          <button
+            className="btn btn-primary"
+            disabled={false}
+            type="button"
+          >
+            Add Task
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App should render tasks 1`] = `
+<div
+  className="justify-content-center container row"
+>
+  <div
+    className="col-md-8"
+  >
+    <div
+      className="card"
+    >
+      <div
+        className="card-header"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-tasks fa-w-16 "
+          data-icon="tasks"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M139.61 35.5a12 12 0 0 0-17 0L58.93 98.81l-22.7-22.12a12 12 0 0 0-17 0L3.53 92.41a12 12 0 0 0 0 17l47.59 47.4a12.78 12.78 0 0 0 17.61 0l15.59-15.62L156.52 69a12.09 12.09 0 0 0 .09-17zm0 159.19a12 12 0 0 0-17 0l-63.68 63.72-22.7-22.1a12 12 0 0 0-17 0L3.53 252a12 12 0 0 0 0 17L51 316.5a12.77 12.77 0 0 0 17.6 0l15.7-15.69 72.2-72.22a12 12 0 0 0 .09-16.9zM64 368c-26.49 0-48.59 21.5-48.59 48S37.53 464 64 464a48 48 0 0 0 0-96zm432 16H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+         Task Lists
+      </div>
+      <div
+        className="card-body"
+      >
+        <div
+          className="scroll-area-sm"
+        >
+          <div
+            className="ps-show-limits"
+          >
+            <div
+              className="ps ps--active-y"
+              style={
+                Object {
+                  "position": "static",
+                }
+              }
+            >
+              <div
+                className="ps-content"
+              >
+                <div
+                  className="list-group list-group-flush"
+                  onKeyDown={[Function]}
+                >
+                  <div
+                    className="list-group-item"
+                    data-rb-event-key={null}
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="todo-indicator bg-warning"
+                    />
+                    <div
+                      className="widget-content p-0"
+                    >
+                      <div
+                        className="widget-content-wrapper"
+                      >
+                        <div
+                          className="widget-content-left mr-2"
+                        >
+                          <div
+                            className="custom-checkbox custom-control"
+                          >
+                            <input
+                              className="custom-control-input"
+                              id="exampleCustomCheckbox12"
+                              type="checkbox"
+                            />
+                            <label
+                              className="custom-control-label"
+                              htmlFor="exampleCustomCheckbox12"
+                            >
+                               
+                            </label>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-left"
+                        >
+                          <div
+                            className="widget-heading"
+                          >
+                            N/A
+                          </div>
+                          <div
+                            className="widget-subheading"
+                          >
+                            <i>
+                              By 
+                              Anonymous
+                            </i>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-right"
+                        >
+                          <button
+                            className="btn btn-outline-success"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-check fa-w-16 "
+                              data-icon="check"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 512 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                          <button
+                            className="btn btn-outline-danger"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-trash fa-w-14 "
+                              data-icon="trash"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 448 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="list-group-item"
+                    data-rb-event-key={null}
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="todo-indicator bg-warning"
+                    />
+                    <div
+                      className="widget-content p-0"
+                    >
+                      <div
+                        className="widget-content-wrapper"
+                      >
+                        <div
+                          className="widget-content-left mr-2"
+                        >
+                          <div
+                            className="custom-checkbox custom-control"
+                          >
+                            <input
+                              className="custom-control-input"
+                              id="exampleCustomCheckbox12"
+                              type="checkbox"
+                            />
+                            <label
+                              className="custom-control-label"
+                              htmlFor="exampleCustomCheckbox12"
+                            >
+                               
+                            </label>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-left"
+                        >
+                          <div
+                            className="widget-heading widget-heading--completed"
+                          >
+                            N/A
+                          </div>
+                          <div
+                            className="widget-subheading"
+                          >
+                            <i>
+                              By 
+                              Anonymous
+                            </i>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-right"
+                        >
+                          <button
+                            className="btn btn-outline-info"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-undo fa-w-16 "
+                              data-icon="undo"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 512 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M212.333 224.333H12c-6.627 0-12-5.373-12-12V12C0 5.373 5.373 0 12 0h48c6.627 0 12 5.373 12 12v78.112C117.773 39.279 184.26 7.47 258.175 8.007c136.906.994 246.448 111.623 246.157 248.532C504.041 393.258 393.12 504 256.333 504c-64.089 0-122.496-24.313-166.51-64.215-5.099-4.622-5.334-12.554-.467-17.42l33.967-33.967c4.474-4.474 11.662-4.717 16.401-.525C170.76 415.336 211.58 432 256.333 432c97.268 0 176-78.716 176-176 0-97.267-78.716-176-176-176-58.496 0-110.28 28.476-142.274 72.333h98.274c6.627 0 12 5.373 12 12v48c0 6.627-5.373 12-12 12z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                          <button
+                            className="btn btn-outline-danger"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-trash fa-w-14 "
+                              data-icon="trash"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 448 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="list-group-item"
+                    data-rb-event-key={null}
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="todo-indicator bg-warning"
+                    />
+                    <div
+                      className="widget-content p-0"
+                    >
+                      <div
+                        className="widget-content-wrapper"
+                      >
+                        <div
+                          className="widget-content-left mr-2"
+                        >
+                          <div
+                            className="custom-checkbox custom-control"
+                          >
+                            <input
+                              className="custom-control-input"
+                              id="exampleCustomCheckbox12"
+                              type="checkbox"
+                            />
+                            <label
+                              className="custom-control-label"
+                              htmlFor="exampleCustomCheckbox12"
+                            >
+                               
+                            </label>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-left"
+                        >
+                          <div
+                            className="widget-heading widget-heading--completed"
+                          >
+                            N/A
+                          </div>
+                          <div
+                            className="widget-subheading"
+                          >
+                            <i>
+                              By 
+                              Anonymous
+                            </i>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-right"
+                        >
+                          <button
+                            className="btn btn-outline-info"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-undo fa-w-16 "
+                              data-icon="undo"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 512 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M212.333 224.333H12c-6.627 0-12-5.373-12-12V12C0 5.373 5.373 0 12 0h48c6.627 0 12 5.373 12 12v78.112C117.773 39.279 184.26 7.47 258.175 8.007c136.906.994 246.448 111.623 246.157 248.532C504.041 393.258 393.12 504 256.333 504c-64.089 0-122.496-24.313-166.51-64.215-5.099-4.622-5.334-12.554-.467-17.42l33.967-33.967c4.474-4.474 11.662-4.717 16.401-.525C170.76 415.336 211.58 432 256.333 432c97.268 0 176-78.716 176-176 0-97.267-78.716-176-176-176-58.496 0-110.28 28.476-142.274 72.333h98.274c6.627 0 12 5.373 12 12v48c0 6.627-5.373 12-12 12z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                          <button
+                            className="btn btn-outline-danger"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-trash fa-w-14 "
+                              data-icon="trash"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 448 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="list-group-item"
+                    data-rb-event-key={null}
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="todo-indicator bg-warning"
+                    />
+                    <div
+                      className="widget-content p-0"
+                    >
+                      <div
+                        className="widget-content-wrapper"
+                      >
+                        <div
+                          className="widget-content-left mr-2"
+                        >
+                          <div
+                            className="custom-checkbox custom-control"
+                          >
+                            <input
+                              className="custom-control-input"
+                              id="exampleCustomCheckbox12"
+                              type="checkbox"
+                            />
+                            <label
+                              className="custom-control-label"
+                              htmlFor="exampleCustomCheckbox12"
+                            >
+                               
+                            </label>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-left"
+                        >
+                          <div
+                            className="widget-heading widget-heading--completed"
+                          >
+                            N/A
+                          </div>
+                          <div
+                            className="widget-subheading"
+                          >
+                            <i>
+                              By 
+                              Anonymous
+                            </i>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-right"
+                        >
+                          <button
+                            className="btn btn-outline-info"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-undo fa-w-16 "
+                              data-icon="undo"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 512 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M212.333 224.333H12c-6.627 0-12-5.373-12-12V12C0 5.373 5.373 0 12 0h48c6.627 0 12 5.373 12 12v78.112C117.773 39.279 184.26 7.47 258.175 8.007c136.906.994 246.448 111.623 246.157 248.532C504.041 393.258 393.12 504 256.333 504c-64.089 0-122.496-24.313-166.51-64.215-5.099-4.622-5.334-12.554-.467-17.42l33.967-33.967c4.474-4.474 11.662-4.717 16.401-.525C170.76 415.336 211.58 432 256.333 432c97.268 0 176-78.716 176-176 0-97.267-78.716-176-176-176-58.496 0-110.28 28.476-142.274 72.333h98.274c6.627 0 12 5.373 12 12v48c0 6.627-5.373 12-12 12z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                          <button
+                            className="btn btn-outline-danger"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-trash fa-w-14 "
+                              data-icon="trash"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 448 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="list-group-item"
+                    data-rb-event-key={null}
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="todo-indicator bg-warning"
+                    />
+                    <div
+                      className="widget-content p-0"
+                    >
+                      <div
+                        className="widget-content-wrapper"
+                      >
+                        <div
+                          className="widget-content-left mr-2"
+                        >
+                          <div
+                            className="custom-checkbox custom-control"
+                          >
+                            <input
+                              className="custom-control-input"
+                              id="exampleCustomCheckbox12"
+                              type="checkbox"
+                            />
+                            <label
+                              className="custom-control-label"
+                              htmlFor="exampleCustomCheckbox12"
+                            >
+                               
+                            </label>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-left"
+                        >
+                          <div
+                            className="widget-heading widget-heading--completed"
+                          >
+                            N/A
+                          </div>
+                          <div
+                            className="widget-subheading"
+                          >
+                            <i>
+                              By 
+                              Anonymous
+                            </i>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-right"
+                        >
+                          <button
+                            className="btn btn-outline-info"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-undo fa-w-16 "
+                              data-icon="undo"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 512 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M212.333 224.333H12c-6.627 0-12-5.373-12-12V12C0 5.373 5.373 0 12 0h48c6.627 0 12 5.373 12 12v78.112C117.773 39.279 184.26 7.47 258.175 8.007c136.906.994 246.448 111.623 246.157 248.532C504.041 393.258 393.12 504 256.333 504c-64.089 0-122.496-24.313-166.51-64.215-5.099-4.622-5.334-12.554-.467-17.42l33.967-33.967c4.474-4.474 11.662-4.717 16.401-.525C170.76 415.336 211.58 432 256.333 432c97.268 0 176-78.716 176-176 0-97.267-78.716-176-176-176-58.496 0-110.28 28.476-142.274 72.333h98.274c6.627 0 12 5.373 12 12v48c0 6.627-5.373 12-12 12z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                          <button
+                            className="btn btn-outline-danger"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-trash fa-w-14 "
+                              data-icon="trash"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 448 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="list-group-item"
+                    data-rb-event-key={null}
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="todo-indicator bg-warning"
+                    />
+                    <div
+                      className="widget-content p-0"
+                    >
+                      <div
+                        className="widget-content-wrapper"
+                      >
+                        <div
+                          className="widget-content-left mr-2"
+                        >
+                          <div
+                            className="custom-checkbox custom-control"
+                          >
+                            <input
+                              className="custom-control-input"
+                              id="exampleCustomCheckbox12"
+                              type="checkbox"
+                            />
+                            <label
+                              className="custom-control-label"
+                              htmlFor="exampleCustomCheckbox12"
+                            >
+                               
+                            </label>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-left"
+                        >
+                          <div
+                            className="widget-heading widget-heading--completed"
+                          >
+                            N/A
+                          </div>
+                          <div
+                            className="widget-subheading"
+                          >
+                            <i>
+                              By 
+                              Anonymous
+                            </i>
+                          </div>
+                        </div>
+                        <div
+                          className="widget-content-right"
+                        >
+                          <button
+                            className="btn btn-outline-info"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-undo fa-w-16 "
+                              data-icon="undo"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 512 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M212.333 224.333H12c-6.627 0-12-5.373-12-12V12C0 5.373 5.373 0 12 0h48c6.627 0 12 5.373 12 12v78.112C117.773 39.279 184.26 7.47 258.175 8.007c136.906.994 246.448 111.623 246.157 248.532C504.041 393.258 393.12 504 256.333 504c-64.089 0-122.496-24.313-166.51-64.215-5.099-4.622-5.334-12.554-.467-17.42l33.967-33.967c4.474-4.474 11.662-4.717 16.401-.525C170.76 415.336 211.58 432 256.333 432c97.268 0 176-78.716 176-176 0-97.267-78.716-176-176-176-58.496 0-110.28 28.476-142.274 72.333h98.274c6.627 0 12 5.373 12 12v48c0 6.627-5.373 12-12 12z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                          <button
+                            className="btn btn-outline-danger"
+                            disabled={false}
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="svg-inline--fa fa-trash fa-w-14 "
+                              data-icon="trash"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              style={Object {}}
+                              viewBox="0 0 448 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"
+                                fill="currentColor"
+                                style={Object {}}
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="text-right card-footer"
+        >
+          <button
+            className="btn btn-link"
+            disabled={false}
+            type="button"
+          >
+            Cancel
+          </button>
+          <button
+            className="btn btn-primary"
+            disabled={false}
+            type="button"
+          >
+            Add Task
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
