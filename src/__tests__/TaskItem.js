@@ -4,6 +4,7 @@ import renderer from 'react-test-renderer'
 import Button from 'react-bootstrap/Button'
 
 import TaskItem from '../components/TaskItem'
+import { variants } from '../consts'
 
 const expectToMatchSnapshot = (component) => {
   expect(renderer.create(component).toJSON()).toMatchSnapshot()
@@ -24,6 +25,10 @@ describe('TaskItem', () => {
 
   it('should mark task as completed', () => {
     expectToMatchSnapshot(<TaskItem completed />)
+  })
+
+  it('should change the variant to success', () => {
+    expectToMatchSnapshot(<TaskItem variant={variants.secondary} />)
   })
 
   it('should trigger onRemove callback', () => {

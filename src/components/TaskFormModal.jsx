@@ -1,0 +1,86 @@
+import React from 'react'
+import Button from 'react-bootstrap/Button'
+import PropTypes from 'prop-types'
+import Modal from 'react-bootstrap/Modal'
+import Form from 'react-bootstrap/Form'
+import * as R from 'ramda'
+
+import { variants } from '../consts'
+
+const propTypes = {
+  id: PropTypes.number,
+  concluded: PropTypes.bool
+}
+
+const defaultProps = {
+  id: 0,
+  concluded: false
+}
+
+const defaultTask = {
+  id: -1,
+  name: '',
+  author: '',
+  completed: false
+}
+
+const TaskFormModal = ({ task = defaultTask, onHide, onSave, labels, show }) => {
+  const [formFields, setFormField] = React.useState(task)
+
+  const handleOnChange = e => {
+    setFormField(Object.assign(formFields, { [e.target.name]: e.target.value }))
+  }
+
+  return (
+    <Modal
+      size='lg'
+      aria-labelledby='contained-modal-title-vcenter'
+      centered
+      show={show}
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id='contained-modal-title-vcenter'>
+            Create / Edit Task
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <Form>
+          <Form.Group>
+            <Form.Label>Name</Form.Label>
+            <Form.Control type='text' placeholder='Enter task name' name='name' value={formFields.name} onChange={handleOnChange} />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Author</Form.Label>
+            <Form.Control type='text' placeholder='Authors name' name='author' value={formFields.author} onChange={handleOnChange} />
+          </Form.Group>
+
+          <Form.Group>
+            <Form.Label>Label color</Form.Label>
+            <Form.Control as='select' name='variant' value={formFields.categoryId} onChange={handleOnChange}>
+              {
+                R.compose(
+                  R.values,
+                  value => <option value={value} key={value}>{value}</option>
+                )(variants)
+
+              }
+            </Form.Control>
+          </Form.Group>
+
+          <Form.Group>
+            <Form.Check type='checkbox' label='Concluded' name='completed' value={formFields.completed} onChange={handleOnChange} />
+          </Form.Group>
+        </Form>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button variant='outline-secondary' onClick={onHide}>Close</Button>
+        <Button onClick={() => onSave(formFields)}>Save</Button>
+      </Modal.Footer>
+    </Modal>
+  )
+}
+
+TaskFormModal.propTypes = propTypes
+TaskFormModal.defaultProps = defaultProps
+
+export default TaskFormModal

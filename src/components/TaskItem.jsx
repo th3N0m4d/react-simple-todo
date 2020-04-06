@@ -4,19 +4,24 @@ import Button from 'react-bootstrap/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faTrash, faUndo } from '@fortawesome/free-solid-svg-icons'
 import cx from 'classnames'
+import * as R from 'ramda'
+
+import { variants } from '../consts'
 
 const propTypes = {
   author: PropTypes.string,
   name: PropTypes.string,
   onConfirm: PropTypes.func,
   onRemove: PropTypes.func,
-  onToggle: PropTypes.func
+  onToggle: PropTypes.func,
+  variant: PropTypes.oneOf(R.values(variants))
 }
 
 const defaultProps = {
   name: 'N/A',
   author: 'Anonymous',
-  completed: false
+  completed: false,
+  variant: variants.info
 }
 
 const renderConfirmButton = onClick => (
@@ -37,18 +42,17 @@ const TaskItem = ({
   onConfirm,
   onRemove,
   completed,
-  onToggle
+  onToggle,
+  variant
 }) => (
-  <li className='list-group-item'>
-    <div className='todo-indicator bg-warning' />
+  <>
+    <div
+      className={cx('todo-indicator', {
+        [`bg-${variant}`]: true
+      })}
+    />
     <div className='widget-content p-0'>
       <div className='widget-content-wrapper'>
-        <div className='widget-content-left mr-2'>
-          <div className='custom-checkbox custom-control'>
-            <input className='custom-control-input' id='exampleCustomCheckbox12' type='checkbox' />
-            <label className='custom-control-label' htmlFor='exampleCustomCheckbox12'>&nbsp;</label>
-          </div>
-        </div>
         <div className='widget-content-left'>
           <div className={cx('widget-heading', {
             'widget-heading--completed': completed
@@ -72,7 +76,7 @@ const TaskItem = ({
         </div>
       </div>
     </div>
-  </li>
+  </>
 )
 
 TaskItem.propTypes = propTypes
