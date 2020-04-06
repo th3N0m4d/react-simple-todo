@@ -7,7 +7,7 @@ import App from './components/App'
 import { variants } from './consts'
 
 const mockState = {
-  tasks: [
+  initialTasks: [
     { id: 0, name: 'Buy wine', variant: variants.dark },
     { id: 1, name: 'Buy cheese', completed: true, variant: variants.warning },
     { id: 2, name: 'Prepare for interview', completed: true, author: 'Edie', variant: variants.info },

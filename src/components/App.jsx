@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTasks } from '@fortawesome/free-solid-svg-icons'
 import Card from 'react-bootstrap/Card'
@@ -7,12 +7,13 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import ListGroup from 'react-bootstrap/ListGroup'
 import PropTypes from 'prop-types'
+import * as R from 'ramda'
 
 import TaskItem from './TaskItem'
 import TaskFormModal from './TaskFormModal'
 
 const propTypes = {
-  tasks: PropTypes.arrayOf(
+  initialTasks: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
       name: PropTypes.string,
@@ -22,15 +23,16 @@ const propTypes = {
 }
 
 const defaultProps = {
-  tasks: []
+  initialTasks: []
 }
 
-const App = ({ tasks, selectedTask, labels }) => {
-  const [modalShow, setModalShow] = React.useState(false)
+const App = ({ initialTasks }) => {
+  const [modalShow, setModalShow] = useState(false)
+  const [tasks, setTasks] = useState(initialTasks)
 
-  const handleOnSave = e => {
+  const handleOnSave = task => {
     setModalShow(false)
-    console.log(e)
+    setTasks(R.append(task, tasks))
   }
 
   return (

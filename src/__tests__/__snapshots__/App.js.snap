@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App should render 1`] = `
+exports[`App props should render 1`] = `
 <div
   className="justify-content-center container row"
 >
@@ -85,7 +85,7 @@ exports[`App should render 1`] = `
 </div>
 `;
 
-exports[`App should render tasks 1`] = `
+exports[`App props should render component with initialTasks 1`] = `
 <div
   className="justify-content-center container row"
 >

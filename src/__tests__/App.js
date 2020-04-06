@@ -1,26 +1,41 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
+import { shallow } from 'enzyme'
 
 import App from '../components/App'
+import TaskFormModal from '../components/TaskFormModal'
+import Button from 'react-bootstrap/Button'
 
 const expectToMatchSnapshot = (component) => {
   expect(renderer.create(component).toJSON()).toMatchSnapshot()
 }
 
-const createApp = (props = {}) => (
-  <App {...props} />
-)
-
 describe('App', () => {
-  it('should render', () => {
-    expectToMatchSnapshot(createApp())
+  describe('props', () => {
+    it('should render', () => {
+      expectToMatchSnapshot(<App />)
+    })
+
+    it('should render component with initialTasks', () => {
+      const tasks = [
+        { id: 0, name: 'Buy wine' },
+        { id: 1, name: 'Buy cheese' }
+      ]
+      expectToMatchSnapshot(<App initialTasks={tasks} />)
+    })
   })
 
-  it('should render tasks', () => {
-    const tasks = [
-      { id: 0, name: 'Buy wine' },
-      { id: 1, name: 'Buy cheese' }
-    ]
-    expectToMatchSnapshot(createApp({ tasks }))
+  describe('interaction', () => {
+    it('should display modal', () => {
+      const wrapper = shallow(<App />)
+
+      const button = wrapper.find(Button).at(1)
+
+      button.simulate('click')
+
+      const modal = wrapper.find(TaskFormModal)
+
+      expect(modal.prop('show')).toBeTruthy()
+    })
   })
 })
