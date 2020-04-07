@@ -37,5 +37,29 @@ describe('App', () => {
 
       expect(modal.prop('show')).toBeTruthy()
     })
+
+    it('should hide modal when user clicks "Save"', () => {
+      const wrapper = shallow(<App />)
+
+      const handleOnSaveSpy = jest.spyOn(wrapper.instance(), 'handleOnSave')
+
+      wrapper.instance().forceUpdate()
+
+      wrapper.find(TaskFormModal).prop('onSave')()
+
+      expect(handleOnSaveSpy).toHaveBeenCalled()
+    })
+
+    it('should hide modal when user clicks "Cancel"', () => {
+      const wrapper = shallow(<App />)
+
+      const handleOnSaveSpy = jest.spyOn(wrapper.instance(), 'handleOnModalHide')
+
+      wrapper.instance().forceUpdate()
+
+      wrapper.find(TaskFormModal).prop('onHide')()
+
+      expect(handleOnSaveSpy).toHaveBeenCalled()
+    })
   })
 })
