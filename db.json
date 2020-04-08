@@ -1,0 +1,28 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "Buy wine",
+            "variant": "dark"
+        },
+        {
+            "id": 1,
+            "name": "Buy cheese",
+            "completed": true,
+            "variant": "warning"
+        },
+        {
+            "id": 2,
+            "name": "Prepare for interview",
+            "completed": true,
+            "author": "Edie",
+            "variant": "info"
+        },
+        {
+            "id": 3,
+            "name": "Meditate",
+            "completed": true,
+            "author": "Edie"
+        }
+    ]
+}
