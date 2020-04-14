@@ -13,4 +13,6 @@ const fetchTasks = () => client.get('/tasks')
 
 const createTask = task => client.post('/tasks')
 
-export { fetchTasks, createTask }
+const removeTask = taskId => client.delete(`/tasks/${taskId}`)
+
+export { fetchTasks, createTask, removeTask }

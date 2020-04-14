@@ -8,7 +8,8 @@ import {
   fetchTasksSucceeded,
   hideModal,
   showModal,
-  fetchTasks
+  fetchTasks,
+  removeTask
 } from '../actions'
 import * as api from '../api'
 
@@ -20,6 +21,10 @@ api.createTask = jest.fn(
 
 api.fetchTasks = jest.fn(
   () => new Promise((resolve, reject) => resolve({ data: [{ id: 0, name: 'Buy wine' }] }))
+)
+
+api.removeTask = jest.fn(
+  () => new Promise((resolve, reject) => resolve({ data: 'Success!' }))
 )
 
 describe('Action Creators', () => {
@@ -55,6 +60,21 @@ describe('Action Creators', () => {
     return store.dispatch(fetchTasks()).then(() => {
       expect(store.getActions()).toEqual(expectedActions)
       expect(api.fetchTasks).toHaveBeenCalled()
+    })
+  })
+
+  it('should handle task removal', () => {
+    const expectedActions = [
+      { type: types.REMOVE_TASK_REQUESTED },
+      { type: types.REMOVE_TASK_SUCCEEDED }
+    ]
+
+    const store = mockStore({})
+    const TASK_ID = 77
+
+    return store.dispatch(removeTask(TASK_ID)).then(() => {
+      expect(store.getActions()).toEqual(expectedActions)
+      expect(api.removeTask).toHaveBeenCalled()
     })
   })
 

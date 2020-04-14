@@ -17,6 +17,22 @@ const createTaskSucceeded = task => ({
   }
 })
 
+const removeTaskRequested = () => ({
+  type: types.REMOVE_TASK_REQUESTED
+})
+
+const removeTaskSucceeded = () => ({
+  type: types.REMOVE_TASK_SUCCEEDED
+})
+
+const removeTask = taskId => {
+  return dispatch => {
+    dispatch(removeTaskRequested())
+    return api.removeTask(taskId)
+      .then(() => dispatch(removeTaskSucceeded()))
+  }
+}
+
 const createTaskRequested = () => ({
   type: types.CREATE_TASK_REQUESTED
 })
@@ -35,15 +51,6 @@ const hideModal = () => ({
   }
 })
 
-const fetchTasks = () => {
-  return dispatch => {
-    dispatch(fetchTasksStarted())
-    return api.fetchTasks().then(resp => {
-      dispatch(fetchTasksSucceeded(resp.data))
-    })
-  }
-}
-
 const fetchTasksStarted = () => ({
   type: types.FETCH_TASKS_STARTED
 })
@@ -55,6 +62,15 @@ const fetchTasksSucceeded = tasks => ({
   }
 })
 
+const fetchTasks = () => {
+  return dispatch => {
+    dispatch(fetchTasksStarted())
+    return api.fetchTasks().then(resp => {
+      dispatch(fetchTasksSucceeded(resp.data))
+    })
+  }
+}
+
 export {
   showModal,
   hideModal,
@@ -62,5 +78,6 @@ export {
   createTask,
   fetchTasksSucceeded,
   createTaskRequested,
-  createTaskSucceeded
+  createTaskSucceeded,
+  removeTask
 }
