@@ -9,4 +9,4 @@ const variants = {
   dark: 'dark'
 }
 
-export { variants }
+export default variants
