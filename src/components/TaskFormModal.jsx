@@ -5,30 +5,36 @@ import Modal from 'react-bootstrap/Modal'
 import Form from 'react-bootstrap/Form'
 import * as R from 'ramda'
 
-import { variants } from '../consts'
+import variants from '../constants/Variants'
+
+const defaultTask = {
+  name: '',
+  author: '',
+  variant: variants.info,
+  completed: false
+}
 
 const propTypes = {
   id: PropTypes.number,
-  concluded: PropTypes.bool
+  completed: PropTypes.bool
 }
 
 const defaultProps = {
   id: 0,
-  concluded: false
+  completed: false,
+  task: defaultTask
 }
 
-const defaultTask = {
-  id: -1,
-  name: '',
-  author: '',
-  completed: false
-}
+const mapVariantsToOption = value => <option value={value} key={value}>{value}</option>
 
-const TaskFormModal = ({ task = defaultTask, onHide, onSave, labels, show }) => {
+const TaskFormModal = ({ task, onHide, onSave, labels, show }) => {
   const [formFields, setFormField] = React.useState(task)
 
   const handleOnChange = e => {
-    setFormField(Object.assign(formFields, { [e.target.name]: e.target.value }))
+    setFormField(R.mergeRight(
+      formFields,
+      { [e.target.name]: e.target.value }
+    ))
   }
 
   return (
@@ -47,20 +53,32 @@ const TaskFormModal = ({ task = defaultTask, onHide, onSave, labels, show }) => 
         <Form>
           <Form.Group>
             <Form.Label>Name</Form.Label>
-            <Form.Control type='text' placeholder='Enter task name' name='name' value={formFields.name} onChange={handleOnChange} />
+            <Form.Control
+              type='text'
+              placeholder='Enter task name'
+              name='name'
+              value={formFields.name}
+              onChange={handleOnChange}
+            />
           </Form.Group>
           <Form.Group>
             <Form.Label>Author</Form.Label>
-            <Form.Control type='text' placeholder='Authors name' name='author' value={formFields.author} onChange={handleOnChange} />
+            <Form.Control
+              type='text'
+              placeholder='Authors name'
+              name='author'
+              value={formFields.author}
+              onChange={handleOnChange}
+            />
           </Form.Group>
 
           <Form.Group>
             <Form.Label>Label color</Form.Label>
-            <Form.Control as='select' name='variant' value={formFields.categoryId} onChange={handleOnChange}>
+            <Form.Control as='select' name='variant' value={formFields.variant} onChange={handleOnChange}>
               {
                 R.compose(
                   R.values,
-                  value => <option value={value} key={value}>{value}</option>
+                  R.map(mapVariantsToOption)
                 )(variants)
 
               }
@@ -68,7 +86,13 @@ const TaskFormModal = ({ task = defaultTask, onHide, onSave, labels, show }) => 
           </Form.Group>
 
           <Form.Group>
-            <Form.Check type='checkbox' label='Concluded' name='completed' value={formFields.completed} onChange={handleOnChange} />
+            <Form.Check
+              type='checkbox'
+              label='Completed'
+              name='completed'
+              value={formFields.completed}
+              onChange={handleOnChange}
+            />
           </Form.Group>
         </Form>
       </Modal.Body>
