@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTasks } from '@fortawesome/free-solid-svg-icons'
 import Card from 'react-bootstrap/Card'
@@ -11,16 +12,12 @@ import * as R from 'ramda'
 
 import TaskItem from './TaskItem'
 import TaskFormModal from './TaskFormModal'
-import { variants } from '../consts'
+import variants from '../constants/Variants'
+import { showModal, hideModal, fetchTasks } from '../actions'
 
-class App extends Component {
-  state = {
-    modalShow: false,
-    tasks: []
-  }
-
+export class App extends Component {
   static propTypes = {
-    initialTasks: PropTypes.arrayOf(
+    tasks: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.number,
         name: PropTypes.string,
@@ -28,19 +25,17 @@ class App extends Component {
         variant: PropTypes.oneOf(R.values(variants)),
         completed: PropTypes.bool
       })
-    )
+    ),
+    modalShow: PropTypes.bool
   }
 
   static defaultProps = {
-    initialTasks: []
+    tasks: [],
+    modalShow: false
   }
 
   componentDidMount () {
-    const { initialTasks } = this.props
-
-    this.setState({
-      tasks: initialTasks
-    })
+    this.props.dispatch(fetchTasks())
   }
 
   handleOnSave = task => {
@@ -48,19 +43,15 @@ class App extends Component {
   }
 
   handleOnModalHide = () => {
-    this.setState({
-      modalShow: false
-    })
+    this.props.dispatch(hideModal())
   }
 
   handleOnModalShow = () => {
-    this.setState({
-      modalShow: true
-    })
+    this.props.dispatch(showModal())
   }
 
   render () {
-    const { tasks, modalShow } = this.state
+    const { tasks, modalShow } = this.props
 
     return (
       <Row className='justify-content-center container'>
@@ -109,4 +100,13 @@ class App extends Component {
   }
 }
 
-export default App
+const mapStateToProps = ({ tasks, modalShow }) => {
+  return {
+    tasks,
+    modalShow
+  }
+}
+
+const ConnectedApp = connect(mapStateToProps)(App)
+
+export default ConnectedApp
