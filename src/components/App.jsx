@@ -13,7 +13,12 @@ import * as R from 'ramda'
 import TaskItem from './TaskItem'
 import TaskFormModal from './TaskFormModal'
 import variants from '../constants/Variants'
-import { showModal, hideModal, fetchTasks } from '../actions'
+import {
+  showModal,
+  hideModal,
+  fetchTasks,
+  removeTask
+} from '../actions'
 
 export class App extends Component {
   static propTypes = {
@@ -50,6 +55,10 @@ export class App extends Component {
     this.props.dispatch(showModal())
   }
 
+  handleOnTaskRemove = taskId => {
+    this.props.dispatch(removeTask(taskId))
+  }
+
   render () {
     const { tasks, modalShow } = this.props
 
@@ -70,7 +79,7 @@ export class App extends Component {
                         {
                           tasks.map(task => (
                             <ListGroup.Item key={task.id}>
-                              <TaskItem {...task} />
+                              <TaskItem {...task} onRemove={() => this.handleOnTaskRemove(task.id)} />
                             </ListGroup.Item>
                           ))
                         }

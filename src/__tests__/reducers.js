@@ -1,16 +1,21 @@
 import tasks from '../reducers'
-import { showModal, hideModal, fetchTasksSucceeded } from '../actions'
+import {
+  showModal,
+  hideModal,
+  fetchTasksSucceeded,
+  removeTaskSucceeded
+} from '../actions'
 import * as types from '../constants/ActionTypes'
 
 describe('Reducers', () => {
-  const initialState = {
-    tasks: [],
-    modalShow: false
-  }
-
   const task = {
     id: 0,
     name: 'Buy wine'
+  }
+
+  const initialState = {
+    tasks: [task],
+    modalShow: false
   }
 
   it('should return default state', () => {
@@ -33,5 +38,12 @@ describe('Reducers', () => {
     const newState = { ...initialState, tasks: [task] }
 
     expect(tasks(initialState, fetchTasksSucceeded([task]))).toEqual(newState)
+  })
+
+  it(`should handle action type ${types.REMOVE_TASK_SUCCEEDED}`, () => {
+    const newState = { ...initialState, tasks: [] }
+    const TASK_ID = 0
+
+    expect(tasks(initialState, removeTaskSucceeded(TASK_ID))).toEqual(newState)
   })
 })

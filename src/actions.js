@@ -21,15 +21,16 @@ const removeTaskRequested = () => ({
   type: types.REMOVE_TASK_REQUESTED
 })
 
-const removeTaskSucceeded = () => ({
-  type: types.REMOVE_TASK_SUCCEEDED
+const removeTaskSucceeded = taskId => ({
+  type: types.REMOVE_TASK_SUCCEEDED,
+  payload: { taskId }
 })
 
 const removeTask = taskId => {
   return dispatch => {
     dispatch(removeTaskRequested())
     return api.removeTask(taskId)
-      .then(() => dispatch(removeTaskSucceeded()))
+      .then(() => dispatch(removeTaskSucceeded(taskId)))
   }
 }
 
@@ -79,5 +80,6 @@ export {
   fetchTasksSucceeded,
   createTaskRequested,
   createTaskSucceeded,
-  removeTask
+  removeTask,
+  removeTaskSucceeded
 }

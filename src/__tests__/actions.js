@@ -64,13 +64,12 @@ describe('Action Creators', () => {
   })
 
   it('should handle task removal', () => {
-    const expectedActions = [
-      { type: types.REMOVE_TASK_REQUESTED },
-      { type: types.REMOVE_TASK_SUCCEEDED }
-    ]
-
     const store = mockStore({})
     const TASK_ID = 77
+    const expectedActions = [
+      { type: types.REMOVE_TASK_REQUESTED },
+      { type: types.REMOVE_TASK_SUCCEEDED, payload: { taskId: TASK_ID } }
+    ]
 
     return store.dispatch(removeTask(TASK_ID)).then(() => {
       expect(store.getActions()).toEqual(expectedActions)
