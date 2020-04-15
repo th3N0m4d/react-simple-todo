@@ -7,6 +7,11 @@ const initialState = {
 
 const todo = (state = initialState, action) => {
   switch (action.type) {
+    case types.CREATE_TASK_SUCCEEDED:
+      return {
+        ...state,
+        tasks: [...state.tasks, action.payload]
+      }
     case types.REMOVE_TASK_SUCCEEDED:
       return {
         ...state,

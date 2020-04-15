@@ -18,7 +18,8 @@ import {
   hideModal,
   fetchTasks,
   removeTask,
-  updateTask
+  updateTask,
+  createTask
 } from '../actions'
 
 export class App extends Component {
@@ -45,7 +46,8 @@ export class App extends Component {
   }
 
   handleOnSave = task => {
-
+    this.props.dispatch(createTask(task))
+    this.props.dispatch(hideModal())
   }
 
   handleOnModalHide = () => {

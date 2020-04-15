@@ -3,9 +3,7 @@ import * as types from './constants/ActionTypes'
 
 const createTaskSucceeded = task => ({
   type: types.CREATE_TASK_SUCCEEDED,
-  payload: {
-    task
-  }
+  payload: task
 })
 
 const createTaskRequested = () => ({
@@ -16,8 +14,7 @@ const createTask = task => {
   return dispatch => {
     dispatch(createTaskRequested())
     return api.createTask(task)
-      .then(resp => dispatch(createTaskSucceeded(resp.data))
-      )
+      .then(resp => dispatch(createTaskSucceeded(resp.data)))
   }
 }
 

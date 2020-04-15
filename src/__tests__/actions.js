@@ -39,7 +39,7 @@ describe('Action Creators', () => {
   it('should handle task creation', () => {
     const expectedActions = [
       { type: types.CREATE_TASK_REQUESTED },
-      { type: types.CREATE_TASK_SUCCEEDED, payload: { task: 'Foo' } }
+      { type: types.CREATE_TASK_SUCCEEDED, payload: 'Foo' }
     ]
 
     const store = mockStore({

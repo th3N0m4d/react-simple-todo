@@ -15,12 +15,12 @@ const defaultTask = {
 }
 
 const propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.string,
   completed: PropTypes.bool
 }
 
 const defaultProps = {
-  id: 0,
+  id: '0',
   completed: false,
   task: defaultTask
 }
@@ -37,11 +37,17 @@ const TaskFormModal = ({ task, onHide, onSave, labels, show }) => {
     ))
   }
 
+  const handleOnSave = e => {
+    onSave(formFields)
+    setFormField(defaultTask)
+  }
+
   return (
     <Modal
       size='lg'
       aria-labelledby='contained-modal-title-vcenter'
       centered
+      onHide={onHide}
       show={show}
     >
       <Modal.Header closeButton>
@@ -98,7 +104,7 @@ const TaskFormModal = ({ task, onHide, onSave, labels, show }) => {
       </Modal.Body>
       <Modal.Footer>
         <Button variant='outline-secondary' onClick={onHide}>Close</Button>
-        <Button onClick={() => onSave(formFields)}>Save</Button>
+        <Button onClick={handleOnSave}>Save</Button>
       </Modal.Footer>
     </Modal>
   )
