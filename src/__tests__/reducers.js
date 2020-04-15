@@ -3,14 +3,16 @@ import {
   showModal,
   hideModal,
   fetchTasksSucceeded,
-  removeTaskSucceeded
+  removeTaskSucceeded,
+  updateTaskSucceeded
 } from '../actions'
 import * as types from '../constants/ActionTypes'
 
 describe('Reducers', () => {
   const task = {
     id: 0,
-    name: 'Buy wine'
+    name: 'Buy wine',
+    completed: false
   }
 
   const initialState = {
@@ -45,5 +47,12 @@ describe('Reducers', () => {
     const TASK_ID = 0
 
     expect(tasks(initialState, removeTaskSucceeded(TASK_ID))).toEqual(newState)
+  })
+
+  it(`should handle action type ${types.TASK_UPDATE_SUCCEEDED}`, () => {
+    const taskToUpdate = { ...task, completed: true }
+    const newState = { ...initialState, tasks: [{ ...task, completed: true }] }
+
+    expect(tasks(initialState, updateTaskSucceeded(taskToUpdate))).toEqual(newState)
   })
 })

@@ -9,10 +9,14 @@ const client = axios.create({
   }
 })
 
-const fetchTasks = () => client.get('/tasks')
-
 const createTask = task => client.post('/tasks')
-
+const fetchTasks = () => client.get('/tasks')
 const removeTask = taskId => client.delete(`/tasks/${taskId}`)
+const updateTask = task => client.put(`/tasks/${task.id}`, task)
 
-export { fetchTasks, createTask, removeTask }
+export {
+  createTask,
+  fetchTasks,
+  removeTask,
+  updateTask
+}

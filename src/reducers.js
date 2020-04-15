@@ -13,6 +13,18 @@ const todo = (state = initialState, action) => {
         tasks: state.tasks.filter(task => task.id !== action.payload.taskId)
       }
 
+    case types.TASK_UPDATE_SUCCEEDED:
+      return {
+        ...state,
+        tasks: state.tasks.map(task => {
+          if (task.id === action.payload.id) {
+            return { ...task, ...action.payload }
+          }
+
+          return task
+        })
+      }
+
     case types.SHOW_MODAL:
     case types.HIDE_MODAL:
     case types.FETCH_TASKS_SUCCEEDED:

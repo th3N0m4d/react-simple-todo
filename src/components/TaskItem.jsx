@@ -10,6 +10,7 @@ import variants from '../constants/Variants'
 
 const propTypes = {
   author: PropTypes.string,
+  completed: PropTypes.bool,
   name: PropTypes.string,
   onConfirm: PropTypes.func,
   onRemove: PropTypes.func,

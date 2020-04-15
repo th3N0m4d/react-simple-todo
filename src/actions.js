@@ -1,6 +1,17 @@
 import * as api from './api'
 import * as types from './constants/ActionTypes'
 
+const createTaskSucceeded = task => ({
+  type: types.CREATE_TASK_SUCCEEDED,
+  payload: {
+    task
+  }
+})
+
+const createTaskRequested = () => ({
+  type: types.CREATE_TASK_REQUESTED
+})
+
 const createTask = task => {
   return dispatch => {
     dispatch(createTaskRequested())
@@ -9,13 +20,6 @@ const createTask = task => {
       )
   }
 }
-
-const createTaskSucceeded = task => ({
-  type: types.CREATE_TASK_SUCCEEDED,
-  payload: {
-    task
-  }
-})
 
 const removeTaskRequested = () => ({
   type: types.REMOVE_TASK_REQUESTED
@@ -33,10 +37,6 @@ const removeTask = taskId => {
       .then(() => dispatch(removeTaskSucceeded(taskId)))
   }
 }
-
-const createTaskRequested = () => ({
-  type: types.CREATE_TASK_REQUESTED
-})
 
 const showModal = () => ({
   type: types.SHOW_MODAL,
@@ -72,6 +72,24 @@ const fetchTasks = () => {
   }
 }
 
+const updateTaskRequested = () => ({
+  type: types.TASK_UPDATE_REQUESTED
+})
+
+const updateTaskSucceeded = task => ({
+  type: types.TASK_UPDATE_SUCCEEDED,
+  payload: task
+})
+
+const updateTask = task => {
+  return dispatch => {
+    dispatch(updateTaskRequested())
+    return api.updateTask(task).then(() => {
+      dispatch(updateTaskSucceeded(task))
+    })
+  }
+}
+
 export {
   showModal,
   hideModal,
@@ -81,5 +99,8 @@ export {
   createTaskRequested,
   createTaskSucceeded,
   removeTask,
-  removeTaskSucceeded
+  removeTaskSucceeded,
+  updateTask,
+  updateTaskRequested,
+  updateTaskSucceeded
 }

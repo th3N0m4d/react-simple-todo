@@ -9,7 +9,8 @@ import {
   hideModal,
   showModal,
   fetchTasks,
-  removeTask
+  removeTask,
+  updateTask
 } from '../actions'
 import * as api from '../api'
 
@@ -25,6 +26,10 @@ api.fetchTasks = jest.fn(
 
 api.removeTask = jest.fn(
   () => new Promise((resolve, reject) => resolve({ data: 'Success!' }))
+)
+
+api.updateTask = jest.fn(
+  () => new Promise((resolve, reject) => resolve({ data: { id: 0, name: 'Foo' } }))
 )
 
 describe('Action Creators', () => {
@@ -74,6 +79,20 @@ describe('Action Creators', () => {
     return store.dispatch(removeTask(TASK_ID)).then(() => {
       expect(store.getActions()).toEqual(expectedActions)
       expect(api.removeTask).toHaveBeenCalled()
+    })
+  })
+
+  it('should handle task update', () => {
+    const store = mockStore({})
+    const task = { id: 0, name: 'Foo' }
+    const expectedActions = [
+      { type: types.TASK_UPDATE_REQUESTED },
+      { type: types.TASK_UPDATE_SUCCEEDED, payload: task }
+    ]
+
+    return store.dispatch(updateTask(task)).then(() => {
+      expect(store.getActions()).toEqual(expectedActions)
+      expect(api.updateTask).toHaveBeenCalled()
     })
   })
 

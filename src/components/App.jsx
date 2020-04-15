@@ -17,7 +17,8 @@ import {
   showModal,
   hideModal,
   fetchTasks,
-  removeTask
+  removeTask,
+  updateTask
 } from '../actions'
 
 export class App extends Component {
@@ -59,6 +60,11 @@ export class App extends Component {
     this.props.dispatch(removeTask(taskId))
   }
 
+  handleOnToggleCompletion = task => {
+    const { completed } = task
+    this.props.dispatch(updateTask({ ...task, completed: !completed }))
+  }
+
   render () {
     const { tasks, modalShow } = this.props
 
@@ -79,7 +85,11 @@ export class App extends Component {
                         {
                           tasks.map(task => (
                             <ListGroup.Item key={task.id}>
-                              <TaskItem {...task} onRemove={() => this.handleOnTaskRemove(task.id)} />
+                              <TaskItem
+                                {...task}
+                                onRemove={() => this.handleOnTaskRemove(task.id)}
+                                onToggle={() => this.handleOnToggleCompletion(task)}
+                              />
                             </ListGroup.Item>
                           ))
                         }
