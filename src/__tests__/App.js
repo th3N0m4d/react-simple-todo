@@ -5,7 +5,6 @@ import * as R from 'ramda'
 
 import { App } from '../components/App'
 import TaskFormModal from '../components/TaskFormModal'
-import Button from 'react-bootstrap/Button'
 
 const expectToMatchSnapshot = (component) => {
   expect(renderer.create(component).toJSON()).toMatchSnapshot()
@@ -34,19 +33,7 @@ describe('App', () => {
   })
 
   describe('interaction', () => {
-    it.skip('should display modal', () => {
-      const wrapper = shallow(<App dispatch={R.T} />)
-
-      const button = wrapper.find(Button).at(1)
-
-      button.simulate('click')
-
-      const modal = wrapper.find(TaskFormModal)
-
-      expect(modal.prop('show')).toBeTruthy()
-    })
-
-    it('should hide modal when user clicks "Save"', () => {
+    it('should bind to TaskModals onSave event', () => {
       const wrapper = shallow(<App dispatch={R.T} />)
 
       const handleOnSaveSpy = jest.spyOn(wrapper.instance(), 'handleOnSave')
@@ -58,7 +45,7 @@ describe('App', () => {
       expect(handleOnSaveSpy).toHaveBeenCalled()
     })
 
-    it('should hide modal when user clicks "Cancel"', () => {
+    it('should bind to TaskModals onHide event', () => {
       const wrapper = shallow(<App dispatch={R.T} />)
 
       const handleOnSaveSpy = jest.spyOn(wrapper.instance(), 'handleOnModalHide')
