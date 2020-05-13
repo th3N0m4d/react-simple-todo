@@ -1,4 +1,4 @@
-import tasks from '../reducers'
+import tasks from '@/reducers'
 import {
   showModal,
   hideModal,
@@ -6,8 +6,8 @@ import {
   removeTaskSucceeded,
   updateTaskSucceeded,
   createTaskSucceeded
-} from '../actions'
-import * as types from '../constants/ActionTypes'
+} from '@/actions'
+import * as types from '@/constants/ActionTypes'
 
 describe('Reducers', () => {
   const task = {

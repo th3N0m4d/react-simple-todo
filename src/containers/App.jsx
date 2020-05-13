@@ -10,9 +10,9 @@ import ListGroup from 'react-bootstrap/ListGroup'
 import PropTypes from 'prop-types'
 import * as R from 'ramda'
 
-import TaskItem from '../components/TaskItem'
-import TaskFormModal from '../components/TaskFormModal'
-import variants from '../constants/Variants'
+import TaskItem from '@/components/TaskItem'
+import TaskFormModal from '@/components/TaskFormModal'
+import variants from '@/constants/Variants'
 import {
   showModal,
   hideModal,
@@ -20,7 +20,7 @@ import {
   removeTask,
   updateTask,
   createTask
-} from '../actions'
+} from '@/actions'
 
 export class App extends Component {
   static propTypes = {

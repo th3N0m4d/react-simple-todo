@@ -6,7 +6,7 @@ import { faCheck, faTrash, faUndo } from '@fortawesome/free-solid-svg-icons'
 import cx from 'classnames'
 import * as R from 'ramda'
 
-import variants from '../constants/Variants'
+import variants from '@/constants/Variants'
 
 const propTypes = {
   author: PropTypes.string,

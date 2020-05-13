@@ -1,7 +1,7 @@
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 
-import * as types from '../constants/ActionTypes'
+import * as types from '@/constants/ActionTypes'
 
 import {
   createTask,
@@ -11,10 +11,10 @@ import {
   fetchTasks,
   removeTask,
   updateTask
-} from '../actions'
-import * as api from '../api'
+} from '@/actions'
+import * as api from '@/api'
 
-jest.unmock('../api')
+jest.unmock('@/api')
 
 api.createTask = jest.fn(
   () => new Promise((resolve, reject) => resolve({ data: 'Foo' }))

@@ -12,7 +12,10 @@ const plugins = [
 ]
 
 const resolve = {
-  extensions: ['.jsx', '.js']
+  extensions: ['.jsx', '.js'],
+  alias: {
+    '@': APP_DIR
+  }
 }
 
 const devServer = {

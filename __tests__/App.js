@@ -3,8 +3,8 @@ import renderer from 'react-test-renderer'
 import { shallow, mount } from 'enzyme'
 import * as R from 'ramda'
 
-import { App } from '../containers/App'
-import TaskFormModal from '../components/TaskFormModal'
+import { App } from '@/containers/App'
+import TaskFormModal from '@/components/TaskFormModal'
 
 const expectToMatchSnapshot = (component) => {
   expect(renderer.create(component).toJSON()).toMatchSnapshot()

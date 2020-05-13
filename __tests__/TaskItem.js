@@ -3,8 +3,8 @@ import { shallow } from 'enzyme'
 import renderer from 'react-test-renderer'
 import Button from 'react-bootstrap/Button'
 
-import TaskItem from '../components/TaskItem'
-import variants from '../constants/Variants'
+import TaskItem from '@/components/TaskItem'
+import variants from '@/constants/Variants'
 
 const expectToMatchSnapshot = (component) => {
   expect(renderer.create(component).toJSON()).toMatchSnapshot()

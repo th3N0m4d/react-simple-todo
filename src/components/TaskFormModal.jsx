@@ -5,7 +5,7 @@ import Modal from 'react-bootstrap/Modal'
 import Form from 'react-bootstrap/Form'
 import * as R from 'ramda'
 
-import variants from '../constants/Variants'
+import variants from '@/constants/Variants'
 
 const defaultTask = {
   name: '',

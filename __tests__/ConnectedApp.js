@@ -5,8 +5,8 @@ import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 import * as R from 'ramda'
 
-import * as types from '../constants/ActionTypes'
-import ConnectedApp from '../containers/App'
+import * as types from '@/constants/ActionTypes'
+import ConnectedApp from '@/containers/App'
 
 describe('ConnectedApp', () => {
   const middlewares = [thunk]
