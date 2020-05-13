@@ -6,7 +6,7 @@ import thunk from 'redux-thunk'
 import * as R from 'ramda'
 
 import * as types from '../constants/ActionTypes'
-import ConnectedApp from '../components/App'
+import ConnectedApp from '../containers/App'
 
 describe('ConnectedApp', () => {
   const middlewares = [thunk]
