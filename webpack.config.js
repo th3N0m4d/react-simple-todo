@@ -12,7 +12,7 @@ const plugins = [
 ]
 
 const resolve = {
-  extensions: ['.jsx', '.js'],
+  extensions: ['.jsx', '.js', '.ts', '.tsx'],
   alias: {
     '@': APP_DIR
   }
@@ -28,6 +28,11 @@ const config = {
   devServer,
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
+      },
       {
         test: /\.(jsx|js)$/,
         exclude: /node_modules/,
