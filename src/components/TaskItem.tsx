@@ -1,43 +1,43 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
 import Button from 'react-bootstrap/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faTrash, faUndo } from '@fortawesome/free-solid-svg-icons'
 import cx from 'classnames'
 import * as R from 'ramda'
 
-import variants from '@/constants/Variants'
+import Variants from '@/constants/Variants'
 
-const propTypes = {
-  author: PropTypes.string,
-  completed: PropTypes.bool,
-  name: PropTypes.string,
-  onConfirm: PropTypes.func,
-  onRemove: PropTypes.func,
-  onToggle: PropTypes.func,
-  variant: PropTypes.oneOf(R.values(variants))
+interface Props {
+  author?: string,
+  completed?: boolean,
+  name?: string,
+  onRemove?: () => void,
+  onToggle?: () => void,
+  variant?: Variants
 }
 
 const defaultProps = {
-  name: 'N/A',
   author: 'Anonymous',
   completed: false,
-  variant: variants.info
+  name: 'N/A',
+  onRemove: R.always(undefined),
+  onToggle: R.always(undefined),
+  variant: Variants.info,
 }
 
-const renderConfirmButton = onClick => (
+const renderConfirmButton: React.FunctionComponent<() => void> = onClick => (
   <Button variant='outline-success' onClick={onClick}>
     <FontAwesomeIcon icon={faCheck} />
   </Button>
 )
 
-const renderUndoButton = onClick => (
+const renderUndoButton: React.FunctionComponent<() => void> = onClick => (
   <Button variant='outline-info' onClick={onClick}>
     <FontAwesomeIcon icon={faUndo} />
   </Button>
 )
 
-const TaskItem = ({
+const TaskItem: React.FunctionComponent<Props> = ({
   author,
   completed,
   name,
@@ -79,7 +79,6 @@ const TaskItem = ({
     </>
   )
 
-TaskItem.propTypes = propTypes
 TaskItem.defaultProps = defaultProps
 
 export default TaskItem
