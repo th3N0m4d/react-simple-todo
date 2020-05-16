@@ -3,7 +3,6 @@ import Button from 'react-bootstrap/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faTrash, faUndo } from '@fortawesome/free-solid-svg-icons'
 import cx from 'classnames'
-import * as R from 'ramda'
 
 import Variants from '@/constants/Variants'
 
@@ -20,18 +19,16 @@ const defaultProps = {
   author: 'Anonymous',
   completed: false,
   name: 'N/A',
-  onRemove: R.always(undefined),
-  onToggle: R.always(undefined),
   variant: Variants.info,
 }
 
-const renderConfirmButton: React.FunctionComponent<() => void> = onClick => (
+const renderConfirmButton = (onClick: any) => (
   <Button variant='outline-success' onClick={onClick}>
     <FontAwesomeIcon icon={faCheck} />
   </Button>
 )
 
-const renderUndoButton: React.FunctionComponent<() => void> = onClick => (
+const renderUndoButton = (onClick: any) => (
   <Button variant='outline-info' onClick={onClick}>
     <FontAwesomeIcon icon={faUndo} />
   </Button>

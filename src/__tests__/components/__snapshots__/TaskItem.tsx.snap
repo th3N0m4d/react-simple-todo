@@ -34,7 +34,6 @@ exports[`TaskItem Props should change the variant to success 1`] = `
         <Button
           active={false}
           disabled={false}
-          onClick={[Function]}
           type="button"
           variant="outline-success"
         >
@@ -73,7 +72,6 @@ exports[`TaskItem Props should change the variant to success 1`] = `
         <Button
           active={false}
           disabled={false}
-          onClick={[Function]}
           type="button"
           variant="outline-danger"
         >
@@ -149,7 +147,6 @@ exports[`TaskItem Props should display author's name 1`] = `
         <Button
           active={false}
           disabled={false}
-          onClick={[Function]}
           type="button"
           variant="outline-success"
         >
@@ -188,7 +185,6 @@ exports[`TaskItem Props should display author's name 1`] = `
         <Button
           active={false}
           disabled={false}
-          onClick={[Function]}
           type="button"
           variant="outline-danger"
         >
@@ -264,7 +260,6 @@ exports[`TaskItem Props should display task name 1`] = `
         <Button
           active={false}
           disabled={false}
-          onClick={[Function]}
           type="button"
           variant="outline-success"
         >
@@ -303,7 +298,6 @@ exports[`TaskItem Props should display task name 1`] = `
         <Button
           active={false}
           disabled={false}
-          onClick={[Function]}
           type="button"
           variant="outline-danger"
         >
@@ -379,7 +373,6 @@ exports[`TaskItem Props should mark task as completed 1`] = `
         <Button
           active={false}
           disabled={false}
-          onClick={[Function]}
           type="button"
           variant="outline-info"
         >
@@ -418,7 +411,6 @@ exports[`TaskItem Props should mark task as completed 1`] = `
         <Button
           active={false}
           disabled={false}
-          onClick={[Function]}
           type="button"
           variant="outline-danger"
         >
@@ -494,7 +486,6 @@ exports[`TaskItem Props should render component correctly 1`] = `
         <Button
           active={false}
           disabled={false}
-          onClick={[Function]}
           type="button"
           variant="outline-success"
         >
@@ -533,7 +524,6 @@ exports[`TaskItem Props should render component correctly 1`] = `
         <Button
           active={false}
           disabled={false}
-          onClick={[Function]}
           type="button"
           variant="outline-danger"
         >
