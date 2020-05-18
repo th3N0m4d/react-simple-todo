@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TaskItem Props should change the variant to success 1`] = `
+exports[`TaskItem Props should render component correctly 1`] = `
 <Fragment>
   <div
-    className="todo-indicator bg-1"
+    className="todo-indicator bg-success"
   />
   <div
     className="widget-content p-0"
@@ -16,23 +16,15 @@ exports[`TaskItem Props should change the variant to success 1`] = `
       >
         <div
           className="widget-heading"
-        >
-          N/A
-        </div>
-        <div
-          className="widget-subheading"
-        >
-          <i>
-            By 
-            Anonymous
-          </i>
-        </div>
+          data-test="heading"
+        />
       </div>
       <div
         className="widget-content-right"
       >
         <Button
           active={false}
+          data-test="confirm-button"
           disabled={false}
           type="button"
           variant="outline-success"
@@ -113,236 +105,10 @@ exports[`TaskItem Props should change the variant to success 1`] = `
 </Fragment>
 `;
 
-exports[`TaskItem Props should display author's name 1`] = `
+exports[`TaskItem Props should render component with prop completed and value true 1`] = `
 <Fragment>
   <div
-    className="todo-indicator bg-5"
-  />
-  <div
-    className="widget-content p-0"
-  >
-    <div
-      className="widget-content-wrapper"
-    >
-      <div
-        className="widget-content-left"
-      >
-        <div
-          className="widget-heading"
-        >
-          N/A
-        </div>
-        <div
-          className="widget-subheading"
-        >
-          <i>
-            By 
-            Bob
-          </i>
-        </div>
-      </div>
-      <div
-        className="widget-content-right"
-      >
-        <Button
-          active={false}
-          disabled={false}
-          type="button"
-          variant="outline-success"
-        >
-          <FontAwesomeIcon
-            border={false}
-            className=""
-            fixedWidth={false}
-            flip={null}
-            icon={
-              Object {
-                "icon": Array [
-                  512,
-                  512,
-                  Array [],
-                  "f00c",
-                  "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
-                ],
-                "iconName": "check",
-                "prefix": "fas",
-              }
-            }
-            inverse={false}
-            listItem={false}
-            mask={null}
-            pull={null}
-            pulse={false}
-            rotation={null}
-            size={null}
-            spin={false}
-            swapOpacity={false}
-            symbol={false}
-            title=""
-            transform={null}
-          />
-        </Button>
-        <Button
-          active={false}
-          disabled={false}
-          type="button"
-          variant="outline-danger"
-        >
-          <FontAwesomeIcon
-            border={false}
-            className=""
-            fixedWidth={false}
-            flip={null}
-            icon={
-              Object {
-                "icon": Array [
-                  448,
-                  512,
-                  Array [],
-                  "f1f8",
-                  "M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z",
-                ],
-                "iconName": "trash",
-                "prefix": "fas",
-              }
-            }
-            inverse={false}
-            listItem={false}
-            mask={null}
-            pull={null}
-            pulse={false}
-            rotation={null}
-            size={null}
-            spin={false}
-            swapOpacity={false}
-            symbol={false}
-            title=""
-            transform={null}
-          />
-        </Button>
-      </div>
-    </div>
-  </div>
-</Fragment>
-`;
-
-exports[`TaskItem Props should display task name 1`] = `
-<Fragment>
-  <div
-    className="todo-indicator bg-5"
-  />
-  <div
-    className="widget-content p-0"
-  >
-    <div
-      className="widget-content-wrapper"
-    >
-      <div
-        className="widget-content-left"
-      >
-        <div
-          className="widget-heading"
-        >
-          Buy wine
-        </div>
-        <div
-          className="widget-subheading"
-        >
-          <i>
-            By 
-            Anonymous
-          </i>
-        </div>
-      </div>
-      <div
-        className="widget-content-right"
-      >
-        <Button
-          active={false}
-          disabled={false}
-          type="button"
-          variant="outline-success"
-        >
-          <FontAwesomeIcon
-            border={false}
-            className=""
-            fixedWidth={false}
-            flip={null}
-            icon={
-              Object {
-                "icon": Array [
-                  512,
-                  512,
-                  Array [],
-                  "f00c",
-                  "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
-                ],
-                "iconName": "check",
-                "prefix": "fas",
-              }
-            }
-            inverse={false}
-            listItem={false}
-            mask={null}
-            pull={null}
-            pulse={false}
-            rotation={null}
-            size={null}
-            spin={false}
-            swapOpacity={false}
-            symbol={false}
-            title=""
-            transform={null}
-          />
-        </Button>
-        <Button
-          active={false}
-          disabled={false}
-          type="button"
-          variant="outline-danger"
-        >
-          <FontAwesomeIcon
-            border={false}
-            className=""
-            fixedWidth={false}
-            flip={null}
-            icon={
-              Object {
-                "icon": Array [
-                  448,
-                  512,
-                  Array [],
-                  "f1f8",
-                  "M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z",
-                ],
-                "iconName": "trash",
-                "prefix": "fas",
-              }
-            }
-            inverse={false}
-            listItem={false}
-            mask={null}
-            pull={null}
-            pulse={false}
-            rotation={null}
-            size={null}
-            spin={false}
-            swapOpacity={false}
-            symbol={false}
-            title=""
-            transform={null}
-          />
-        </Button>
-      </div>
-    </div>
-  </div>
-</Fragment>
-`;
-
-exports[`TaskItem Props should mark task as completed 1`] = `
-<Fragment>
-  <div
-    className="todo-indicator bg-5"
+    className="todo-indicator bg-success"
   />
   <div
     className="widget-content p-0"
@@ -355,23 +121,15 @@ exports[`TaskItem Props should mark task as completed 1`] = `
       >
         <div
           className="widget-heading widget-heading--completed"
-        >
-          N/A
-        </div>
-        <div
-          className="widget-subheading"
-        >
-          <i>
-            By 
-            Anonymous
-          </i>
-        </div>
+          data-test="heading"
+        />
       </div>
       <div
         className="widget-content-right"
       >
         <Button
           active={false}
+          data-test="undo-button"
           disabled={false}
           type="button"
           variant="outline-info"
@@ -452,10 +210,10 @@ exports[`TaskItem Props should mark task as completed 1`] = `
 </Fragment>
 `;
 
-exports[`TaskItem Props should render component correctly 1`] = `
+exports[`TaskItem Props should render component with prop dueDate and value 546300000000 1`] = `
 <Fragment>
   <div
-    className="todo-indicator bg-5"
+    className="todo-indicator bg-danger"
   />
   <div
     className="widget-content p-0"
@@ -468,15 +226,15 @@ exports[`TaskItem Props should render component correctly 1`] = `
       >
         <div
           className="widget-heading"
-        >
-          N/A
-        </div>
+          data-test="heading"
+        />
         <div
           className="widget-subheading"
+          data-test="subheading"
         >
           <i>
-            By 
-            Anonymous
+            Due date 
+            4/25/1987
           </i>
         </div>
       </div>
@@ -485,6 +243,114 @@ exports[`TaskItem Props should render component correctly 1`] = `
       >
         <Button
           active={false}
+          data-test="confirm-button"
+          disabled={false}
+          type="button"
+          variant="outline-success"
+        >
+          <FontAwesomeIcon
+            border={false}
+            className=""
+            fixedWidth={false}
+            flip={null}
+            icon={
+              Object {
+                "icon": Array [
+                  512,
+                  512,
+                  Array [],
+                  "f00c",
+                  "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+                ],
+                "iconName": "check",
+                "prefix": "fas",
+              }
+            }
+            inverse={false}
+            listItem={false}
+            mask={null}
+            pull={null}
+            pulse={false}
+            rotation={null}
+            size={null}
+            spin={false}
+            swapOpacity={false}
+            symbol={false}
+            title=""
+            transform={null}
+          />
+        </Button>
+        <Button
+          active={false}
+          disabled={false}
+          type="button"
+          variant="outline-danger"
+        >
+          <FontAwesomeIcon
+            border={false}
+            className=""
+            fixedWidth={false}
+            flip={null}
+            icon={
+              Object {
+                "icon": Array [
+                  448,
+                  512,
+                  Array [],
+                  "f1f8",
+                  "M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z",
+                ],
+                "iconName": "trash",
+                "prefix": "fas",
+              }
+            }
+            inverse={false}
+            listItem={false}
+            mask={null}
+            pull={null}
+            pulse={false}
+            rotation={null}
+            size={null}
+            spin={false}
+            swapOpacity={false}
+            symbol={false}
+            title=""
+            transform={null}
+          />
+        </Button>
+      </div>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`TaskItem Props should render component with prop name and value Buy wine 1`] = `
+<Fragment>
+  <div
+    className="todo-indicator bg-success"
+  />
+  <div
+    className="widget-content p-0"
+  >
+    <div
+      className="widget-content-wrapper"
+    >
+      <div
+        className="widget-content-left"
+      >
+        <div
+          className="widget-heading"
+          data-test="heading"
+        >
+          Buy wine
+        </div>
+      </div>
+      <div
+        className="widget-content-right"
+      >
+        <Button
+          active={false}
+          data-test="confirm-button"
           disabled={false}
           type="button"
           variant="outline-success"

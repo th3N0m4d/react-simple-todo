@@ -3,39 +3,36 @@ import { shallow } from 'enzyme'
 import Button from 'react-bootstrap/Button'
 
 import TaskItem from '@/components/TaskItem'
-import Variants from '@/constants/Variants'
 
 describe('TaskItem', () => {
   describe('Props', () => {
     it('should render component correctly', () => {
       const wrapper = shallow(<TaskItem />)
 
-      expect(wrapper).toMatchSnapshot()
-    })
-
-    it('should display task name', () => {
-      const wrapper = shallow(<TaskItem name='Buy wine' />)
-
-      expect(wrapper).toMatchSnapshot()
-    })
-
-    it('should display author\'s name', () => {
-      const wrapper = shallow(<TaskItem author='Bob' />)
+      const subheading = wrapper.find('[data-test="subheading"]')
+      const confirmButton = wrapper.find('[data-test="confirm-button"]')
+      const undoButton = wrapper.find('[data-test="undo-button"]')
+      const heading = wrapper.find('[data-test="heading"]')
 
       expect(wrapper).toMatchSnapshot()
+      expect(subheading.exists()).toBeFalsy()
+      expect(confirmButton.exists()).toBeTruthy()
+      expect(undoButton.exists()).toBeFalsy()
+      expect(heading.hasClass('widget-heading--completed')).toBeFalsy()
     })
 
-    it('should mark task as completed', () => {
-      const wrapper = shallow(<TaskItem completed={true} />)
+    it.each`
+      propName        | value             
+      ${'dueDate'}    | ${546300000000}   
+      ${'name'}       | ${'Buy wine'}     
+      ${'completed'}  | ${true}            
+    `('should render component with prop $propName and value $value',
+      ({ propName, value }) => {
+        const props = { [propName]: value }
+        const wrapper = shallow(<TaskItem {...props} />)
 
-      expect(wrapper).toMatchSnapshot()
-    })
-
-    it('should change the variant to success', () => {
-      const wrapper = shallow(<TaskItem variant={Variants.secondary} />)
-
-      expect(wrapper).toMatchSnapshot()
-    })
+        expect(wrapper).toMatchSnapshot()
+      });
 
   });
 

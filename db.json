@@ -3,26 +3,22 @@
         {
             "id": "2f4bca7a-2d9b-4146-943e-8e93e12625bb",
             "name": "Buy wine",
-            "variant": "dark"
+            "dueDate": 1589839200000
         },
         {
             "id": "9222b245-3026-4e7e-b77d-2e7dbe3875d9",
             "name": "Buy cheese",
-            "completed": true,
-            "variant": "warning"
+            "dueDate": 1587765600000
         },
         {
             "id": "9009e3e5-d6b2-477c-b2fc-fb7f81d56155",
             "name": "Prepare for interview",
-            "completed": true,
-            "author": "Edie",
-            "variant": "info"
+            "completed": true
         },
         {
             "id": "78255bb7-6973-472f-81b5-c1b881e60148",
             "name": "Meditate",
-            "completed": true,
-            "author": "Edie"
+            "completed": true
         }
     ]
 }

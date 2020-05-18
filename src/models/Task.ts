@@ -1,8 +1,7 @@
 export default interface Task {
     id: string,
     name: string,
-    author: string,
+    dueDate?: number,
     categoryId?: string,
-    variant?: number,
     completed: boolean
 }
