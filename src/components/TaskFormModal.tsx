@@ -4,12 +4,12 @@ import Modal from 'react-bootstrap/Modal'
 import Form from 'react-bootstrap/Form'
 
 interface Props {
-  dueDate: number,
-  name: string,
+  dueDate?: number,
+  name?: string,
   onDateChange(dueDate: number): void,
   onHide(): void,
   onNameChange(name: string): void,
-  show: boolean
+  show?: boolean
 }
 
 const TaskFormModal: React.FunctionComponent<Props> = ({
@@ -48,7 +48,7 @@ const TaskFormModal: React.FunctionComponent<Props> = ({
             <Form.Label>Name</Form.Label>
             <Form.Control
               type='text'
-              placeholder='Enter task name'
+              name='name'
               value={name}
               onChange={handleNameChange}
             />
@@ -57,7 +57,7 @@ const TaskFormModal: React.FunctionComponent<Props> = ({
             <Form.Label>Due date</Form.Label>
             <Form.Control
               type='date'
-              placeholder='Authors name'
+              name='dueDate'
               value={dueDate}
               onChange={handleDateChange}
             />
@@ -65,7 +65,7 @@ const TaskFormModal: React.FunctionComponent<Props> = ({
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant='outline-secondary' onClick={onHide}>Close</Button>
+        <Button variant='outline-secondary' data-test="close-button" onClick={onHide}>Close</Button>
         <Button>Save</Button>
       </Modal.Footer>
     </Modal>

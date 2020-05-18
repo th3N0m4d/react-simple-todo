@@ -1,0 +1,438 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskFormModal Props should render component with prop dueDate and value 546300000000 1`] = `
+<Bootstrap(Modal)
+  aria-labelledby="contained-modal-title-vcenter"
+  centered={true}
+  onHide={[MockFunction]}
+  size="lg"
+>
+  <ModalHeader
+    closeButton={true}
+    closeLabel="Close"
+  >
+    <ModalTitle
+      id="contained-modal-title-vcenter"
+    >
+      Create
+    </ModalTitle>
+  </ModalHeader>
+  <ModalBody>
+    <Form
+      inline={false}
+    >
+      <FormGroup>
+        <FormLabel
+          column={false}
+          srOnly={false}
+        >
+          Name
+        </FormLabel>
+        <FormControl
+          name="name"
+          onChange={[Function]}
+          type="text"
+        />
+      </FormGroup>
+      <FormGroup>
+        <FormLabel
+          column={false}
+          srOnly={false}
+        >
+          Due date
+        </FormLabel>
+        <FormControl
+          name="dueDate"
+          onChange={[Function]}
+          type="date"
+          value={546300000000}
+        />
+      </FormGroup>
+    </Form>
+  </ModalBody>
+  <ModalFooter>
+    <Button
+      active={false}
+      data-test="close-button"
+      disabled={false}
+      onClick={[MockFunction]}
+      type="button"
+      variant="outline-secondary"
+    >
+      Close
+    </Button>
+    <Button
+      active={false}
+      disabled={false}
+      type="button"
+      variant="primary"
+    >
+      Save
+    </Button>
+  </ModalFooter>
+</Bootstrap(Modal)>
+`;
+
+exports[`TaskFormModal Props should render component with prop dueDate and value null 1`] = `
+<Bootstrap(Modal)
+  aria-labelledby="contained-modal-title-vcenter"
+  centered={true}
+  onHide={[MockFunction]}
+  size="lg"
+>
+  <ModalHeader
+    closeButton={true}
+    closeLabel="Close"
+  >
+    <ModalTitle
+      id="contained-modal-title-vcenter"
+    >
+      Create
+    </ModalTitle>
+  </ModalHeader>
+  <ModalBody>
+    <Form
+      inline={false}
+    >
+      <FormGroup>
+        <FormLabel
+          column={false}
+          srOnly={false}
+        >
+          Name
+        </FormLabel>
+        <FormControl
+          name="name"
+          onChange={[Function]}
+          type="text"
+        />
+      </FormGroup>
+      <FormGroup>
+        <FormLabel
+          column={false}
+          srOnly={false}
+        >
+          Due date
+        </FormLabel>
+        <FormControl
+          name="dueDate"
+          onChange={[Function]}
+          type="date"
+          value={null}
+        />
+      </FormGroup>
+    </Form>
+  </ModalBody>
+  <ModalFooter>
+    <Button
+      active={false}
+      data-test="close-button"
+      disabled={false}
+      onClick={[MockFunction]}
+      type="button"
+      variant="outline-secondary"
+    >
+      Close
+    </Button>
+    <Button
+      active={false}
+      disabled={false}
+      type="button"
+      variant="primary"
+    >
+      Save
+    </Button>
+  </ModalFooter>
+</Bootstrap(Modal)>
+`;
+
+exports[`TaskFormModal Props should render component with prop name and value Study React 1`] = `
+<Bootstrap(Modal)
+  aria-labelledby="contained-modal-title-vcenter"
+  centered={true}
+  onHide={[MockFunction]}
+  size="lg"
+>
+  <ModalHeader
+    closeButton={true}
+    closeLabel="Close"
+  >
+    <ModalTitle
+      id="contained-modal-title-vcenter"
+    >
+      Create
+    </ModalTitle>
+  </ModalHeader>
+  <ModalBody>
+    <Form
+      inline={false}
+    >
+      <FormGroup>
+        <FormLabel
+          column={false}
+          srOnly={false}
+        >
+          Name
+        </FormLabel>
+        <FormControl
+          name="name"
+          onChange={[Function]}
+          type="text"
+          value="Study React"
+        />
+      </FormGroup>
+      <FormGroup>
+        <FormLabel
+          column={false}
+          srOnly={false}
+        >
+          Due date
+        </FormLabel>
+        <FormControl
+          name="dueDate"
+          onChange={[Function]}
+          type="date"
+        />
+      </FormGroup>
+    </Form>
+  </ModalBody>
+  <ModalFooter>
+    <Button
+      active={false}
+      data-test="close-button"
+      disabled={false}
+      onClick={[MockFunction]}
+      type="button"
+      variant="outline-secondary"
+    >
+      Close
+    </Button>
+    <Button
+      active={false}
+      disabled={false}
+      type="button"
+      variant="primary"
+    >
+      Save
+    </Button>
+  </ModalFooter>
+</Bootstrap(Modal)>
+`;
+
+exports[`TaskFormModal Props should render component with prop show and value false 1`] = `
+<Bootstrap(Modal)
+  aria-labelledby="contained-modal-title-vcenter"
+  centered={true}
+  onHide={[MockFunction]}
+  show={false}
+  size="lg"
+>
+  <ModalHeader
+    closeButton={true}
+    closeLabel="Close"
+  >
+    <ModalTitle
+      id="contained-modal-title-vcenter"
+    >
+      Create
+    </ModalTitle>
+  </ModalHeader>
+  <ModalBody>
+    <Form
+      inline={false}
+    >
+      <FormGroup>
+        <FormLabel
+          column={false}
+          srOnly={false}
+        >
+          Name
+        </FormLabel>
+        <FormControl
+          name="name"
+          onChange={[Function]}
+          type="text"
+        />
+      </FormGroup>
+      <FormGroup>
+        <FormLabel
+          column={false}
+          srOnly={false}
+        >
+          Due date
+        </FormLabel>
+        <FormControl
+          name="dueDate"
+          onChange={[Function]}
+          type="date"
+        />
+      </FormGroup>
+    </Form>
+  </ModalBody>
+  <ModalFooter>
+    <Button
+      active={false}
+      data-test="close-button"
+      disabled={false}
+      onClick={[MockFunction]}
+      type="button"
+      variant="outline-secondary"
+    >
+      Close
+    </Button>
+    <Button
+      active={false}
+      disabled={false}
+      type="button"
+      variant="primary"
+    >
+      Save
+    </Button>
+  </ModalFooter>
+</Bootstrap(Modal)>
+`;
+
+exports[`TaskFormModal Props should render component with prop show and value true 1`] = `
+<Bootstrap(Modal)
+  aria-labelledby="contained-modal-title-vcenter"
+  centered={true}
+  onHide={[MockFunction]}
+  show={true}
+  size="lg"
+>
+  <ModalHeader
+    closeButton={true}
+    closeLabel="Close"
+  >
+    <ModalTitle
+      id="contained-modal-title-vcenter"
+    >
+      Create
+    </ModalTitle>
+  </ModalHeader>
+  <ModalBody>
+    <Form
+      inline={false}
+    >
+      <FormGroup>
+        <FormLabel
+          column={false}
+          srOnly={false}
+        >
+          Name
+        </FormLabel>
+        <FormControl
+          name="name"
+          onChange={[Function]}
+          type="text"
+        />
+      </FormGroup>
+      <FormGroup>
+        <FormLabel
+          column={false}
+          srOnly={false}
+        >
+          Due date
+        </FormLabel>
+        <FormControl
+          name="dueDate"
+          onChange={[Function]}
+          type="date"
+        />
+      </FormGroup>
+    </Form>
+  </ModalBody>
+  <ModalFooter>
+    <Button
+      active={false}
+      data-test="close-button"
+      disabled={false}
+      onClick={[MockFunction]}
+      type="button"
+      variant="outline-secondary"
+    >
+      Close
+    </Button>
+    <Button
+      active={false}
+      disabled={false}
+      type="button"
+      variant="primary"
+    >
+      Save
+    </Button>
+  </ModalFooter>
+</Bootstrap(Modal)>
+`;
+
+exports[`TaskFormModal Props should render default component 1`] = `
+<Bootstrap(Modal)
+  aria-labelledby="contained-modal-title-vcenter"
+  centered={true}
+  onHide={[MockFunction]}
+  size="lg"
+>
+  <ModalHeader
+    closeButton={true}
+    closeLabel="Close"
+  >
+    <ModalTitle
+      id="contained-modal-title-vcenter"
+    >
+      Create
+    </ModalTitle>
+  </ModalHeader>
+  <ModalBody>
+    <Form
+      inline={false}
+    >
+      <FormGroup>
+        <FormLabel
+          column={false}
+          srOnly={false}
+        >
+          Name
+        </FormLabel>
+        <FormControl
+          name="name"
+          onChange={[Function]}
+          type="text"
+        />
+      </FormGroup>
+      <FormGroup>
+        <FormLabel
+          column={false}
+          srOnly={false}
+        >
+          Due date
+        </FormLabel>
+        <FormControl
+          name="dueDate"
+          onChange={[Function]}
+          type="date"
+        />
+      </FormGroup>
+    </Form>
+  </ModalBody>
+  <ModalFooter>
+    <Button
+      active={false}
+      data-test="close-button"
+      disabled={false}
+      onClick={[MockFunction]}
+      type="button"
+      variant="outline-secondary"
+    >
+      Close
+    </Button>
+    <Button
+      active={false}
+      disabled={false}
+      type="button"
+      variant="primary"
+    >
+      Save
+    </Button>
+  </ModalFooter>
+</Bootstrap(Modal)>
+`;
