@@ -5,7 +5,7 @@ const showModal = (): ModalActionTypes => ({
     modalShow: true
 })
 
-const hideModal = () => ({
+const hideModal = (): ModalActionTypes => ({
     type: HIDE_MODAL,
     modalShow: false
 })
