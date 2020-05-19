@@ -7,6 +7,12 @@ import Task from '@/models/Task'
 import {
     CREATE_TASK_SUCCEEDED,
     CREATE_TASK_REQUESTED,
+    REMOVE_TASK_REQUESTED,
+    REMOVE_TASK_SUCCEEDED,
+    FETCH_TASKS_REQUESTED,
+    FETCH_TASKS_SUCCEEDED,
+    TASK_UPDATE_REQUESTED,
+    TASK_UPDATE_SUCCEEDED,
     TaskActionTypes
 } from '@/store/tasks/types'
 
@@ -33,63 +39,66 @@ const createTask = (task: Task):
 
 // REMOVE TASK
 
-// const removeTaskRequested: ActionCreator<RemoveTaskRequested> = () => ({
-//     type: REMOVE_TASK_REQUESTED
-// })
+const removeTaskRequested = (): TaskActionTypes => ({
+    type: REMOVE_TASK_REQUESTED
+})
 
-// const removeTaskSucceeded: ActionCreator<RemoveTaskSucceeded> = taskId => ({
-//     type: REMOVE_TASK_SUCCEEDED,
-//     taskId
-// })
+const removeTaskSucceeded = (taskId: string): TaskActionTypes => ({
+    type: REMOVE_TASK_SUCCEEDED,
+    taskId
+})
 
-// const removeTask: ActionCreator<ThunkAction<Promise<AnyAction>, State, null, RemoveTaskRequested>> = taskId => {
-//     return async (dispatch: Dispatch) => {
-//         dispatch(removeTaskRequested())
-//         await api.removeTask(taskId)
-//         return dispatch(removeTaskSucceeded(taskId))
-//     }
-// }
+const removeTask = (taskId: string):
+    ThunkAction<Promise<AnyAction>, any, any, TaskActionTypes> => {
+    return async dispatch => {
+        dispatch(removeTaskRequested())
+        await api.removeTask(taskId)
+        return dispatch(removeTaskSucceeded(taskId))
+    }
+}
 
 // FETCH TASKS
 
-// const fetchTasksRequested: ActionCreator<FetchTaskRequested> = () => ({
-//     type: FETCH_TASKS_REQUESTED
-// })
+const fetchTasksRequested = (): TaskActionTypes => ({
+    type: FETCH_TASKS_REQUESTED
+})
 
-// const fetchTasksSucceeded: ActionCreator<FetchTaskSucceeded> = tasks => ({
-//     type: FETCH_TASKS_SUCCEEDED,
-//     tasks
-// })
+const fetchTasksSucceeded = (tasks: Task[]): TaskActionTypes => ({
+    type: FETCH_TASKS_SUCCEEDED,
+    tasks
+})
 
-// const fetchTasks: ActionCreator<ThunkAction<Promise<AnyAction>, State, null, FetchTaskRequested>> = () => {
-//     return async (dispatch: Dispatch) => {
-//         dispatch(fetchTasksRequested())
-//         const { data } = await api.fetchTasks()
-//         return dispatch(fetchTasksSucceeded(data))
-//     }
-// }
+const fetchTasks = (): ThunkAction<Promise<any>, any, any, TaskActionTypes> => {
+    return async dispatch => {
+        dispatch(fetchTasksRequested())
+        const { data } = await api.fetchTasks()
+        return dispatch(fetchTasksSucceeded(data))
+    }
+}
 
 // UPDATE TASK
 
-// const updateTaskRequested: ActionCreator<UpdateTaskRequested> = () => ({
-//     type: TASK_UPDATE_REQUESTED
-// })
+const updateTaskRequested = (): TaskActionTypes => ({
+    type: TASK_UPDATE_REQUESTED
+})
 
-// const updateTaskSucceeded: ActionCreator<UpdateTaskSucceeded> = task => ({
-//     type: TASK_UPDATE_SUCCEEDED,
-//     task
-// })
+const updateTaskSucceeded = (task: Task): TaskActionTypes => ({
+    type: TASK_UPDATE_SUCCEEDED,
+    task
+})
 
-// const updateTask: ActionCreator<ThunkAction<Promise<AnyAction>, State, null, UpdateTaskRequested>> = task => {
-//     return async (dispatch: Dispatch) => {
-//         dispatch(updateTaskRequested())
-//         await api.updateTask(task)
-//         return dispatch(updateTaskSucceeded(task))
-//     }
-// }
+const updateTask = (task: Task):
+    ThunkAction<Promise<any>, any, any, TaskActionTypes> => {
+    return async dispatch => {
+        dispatch(updateTaskRequested())
+        const { data } = await api.updateTask(task)
+        return dispatch(updateTaskSucceeded(data))
+    }
+}
 
 export {
     createTask,
-    createTaskRequested,
-    createTaskSucceeded
+    removeTask,
+    fetchTasks,
+    updateTask
 }
