@@ -12,7 +12,7 @@
         "jsx": "react",
         "strict": true,
         "noImplicitReturns": true,
-        "rootDir": "src",
+        "rootDir": ".",
         "outDir": "dist",
         "paths": {
             "@/*": [
