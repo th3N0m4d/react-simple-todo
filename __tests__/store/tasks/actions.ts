@@ -9,7 +9,7 @@ import {
     fetchTasks,
     updateTask
 } from '@/store/tasks/actions';
-import State from '@/store/State';
+import State from '@/store/tasks/State';
 import Task from '@/models/Task';
 import {
     CREATE_TASK_REQUESTED,
