@@ -92,9 +92,7 @@ export class App extends React.Component<Props> {
                             <ListGroup.Item key={task.id}>
                               <TaskItem
                                 {...task}
-                                // tslint:disable-next-line: jsx-no-lambda
                                 onRemove={() => this.handleOnTaskRemove(task.id)}
-                                // tslint:disable-next-line: jsx-no-lambda
                                 onToggle={() => this.handleOnToggleCompletion(task)}
                               />
                             </ListGroup.Item>
@@ -112,11 +110,13 @@ export class App extends React.Component<Props> {
               </Card.Footer>
             </Card.Body>
           </Card>
-          {/* <TaskFormModal
+          <TaskFormModal
             show={modalShow}
-            onSave={this.handleOnSave}
+            onDateChange={() => undefined}
+            onNameChange={() => undefined}
+            // onSave={this.handleOnSave}
             onHide={this.handleOnModalHide}
-          /> */}
+          />
         </Col>
       </Row>
     )
