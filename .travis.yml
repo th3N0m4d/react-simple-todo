@@ -1,5 +1,5 @@
 before_install:
-- export TZ=Europe/London
+- export TZ=CEST
 language: node_js
 node_js:
 - "stable"
