@@ -42,7 +42,7 @@ const tasks: Reducer<State, TaskActionTypes> = (
             }
 
         case FETCH_TASKS_SUCCEEDED:
-            return { ...state, ...action.tasks }
+            return { ...state, tasks: action.tasks }
         default:
             break
     }
