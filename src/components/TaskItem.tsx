@@ -62,7 +62,7 @@ const TaskItem: React.FunctionComponent<Props> = ({
             >
               {name}
             </div>
-            {dueDate && <div className='widget-subheading' data-test="subheading"><i>Due date: {new Intl.DateTimeFormat('en-US', dateFormatOptions).format(dueDate)}</i></div>}
+            {dueDate && <div className='widget-subheading' data-test="subheading"><i>Due date: {new Intl.DateTimeFormat('en-GB', dateFormatOptions).format(dueDate)}</i></div>}
           </div>
           <div className='widget-content-right'>
 
