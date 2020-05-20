@@ -1,5 +1,5 @@
 interface State {
-    modalShow: boolean
+    readonly modalShow: boolean
 }
 
 export default State

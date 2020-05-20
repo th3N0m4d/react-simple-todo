@@ -1,7 +1,7 @@
 import Task from '@/models/Task'
 
 interface State {
-    tasks: Task[]
+    readonly tasks: Task[]
 }
 
 export default State
