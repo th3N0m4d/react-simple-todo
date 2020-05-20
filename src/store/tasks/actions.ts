@@ -100,5 +100,9 @@ export {
     createTask,
     removeTask,
     fetchTasks,
-    updateTask
+    updateTask,
+    fetchTasksSucceeded,
+    removeTaskSucceeded,
+    updateTaskSucceeded,
+    createTaskSucceeded
 }
