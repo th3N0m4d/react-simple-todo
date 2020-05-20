@@ -5,7 +5,7 @@ import {
     SHOW_MODAL,
     HIDE_MODAL
 } from '@/store/modal/types'
-import State from '@/store/modal/ModalState'
+import State from '@/store/modal/State'
 
 const initialState: State = {
     modalShow: false
