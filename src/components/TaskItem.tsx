@@ -25,6 +25,8 @@ const renderUndoButton = (onClick: any) => (
   </Button>
 )
 
+const dateFormatOptions = { weekday: 'long', month: 'long', day: 'numeric' }
+
 const getVariant = (time: number | undefined) => {
   if (time) {
     const now = new Date().getTime()
@@ -60,7 +62,7 @@ const TaskItem: React.FunctionComponent<Props> = ({
             >
               {name}
             </div>
-            {dueDate && <div className='widget-subheading' data-test="subheading"><i>Due date {new Intl.DateTimeFormat('en-GB').format(dueDate)}</i></div>}
+            {dueDate && <div className='widget-subheading' data-test="subheading"><i>Due date: {new Intl.DateTimeFormat('en-US', dateFormatOptions).format(dueDate)}</i></div>}
           </div>
           <div className='widget-content-right'>
 
