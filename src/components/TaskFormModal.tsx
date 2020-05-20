@@ -1,32 +1,46 @@
 import * as React from 'react'
+import { useState } from 'react'
 import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 import Form from 'react-bootstrap/Form'
+import Task from '@/models/Task'
 
 interface Props {
-  dueDate?: number,
-  name?: string,
-  onDateChange(dueDate: number): void,
   onHide(): void,
-  onNameChange(name: string): void,
+  onSave(task: Task): void,
   show?: boolean
 }
 
 const TaskFormModal: React.FunctionComponent<Props> = ({
-  dueDate,
-  name,
-  onDateChange,
   onHide,
-  onNameChange,
+  onSave,
   show,
 }) => {
 
+  const [name, setName] = useState('')
+  const [dueDate, setDueDate] = useState('')
+
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    onNameChange(e.target.value)
+    setName(e.target.value)
   }
 
   const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    onDateChange(new Date(e.target.value).getTime())
+    setDueDate(e.target.value)
+  }
+
+  const handleOnSave = () => {
+    const task: Task = {
+      completed: false,
+      dueDate: new Date(dueDate).getTime(),
+      id: '',
+      name,
+    }
+
+    onSave(task)
+
+    setName('')
+    setDueDate('')
+
   }
 
   return (
@@ -66,7 +80,7 @@ const TaskFormModal: React.FunctionComponent<Props> = ({
       </Modal.Body>
       <Modal.Footer>
         <Button variant='outline-secondary' data-test="close-button" onClick={onHide}>Close</Button>
-        <Button>Save</Button>
+        <Button onClick={handleOnSave} data-test="save-button">Save</Button>
       </Modal.Footer>
     </Modal>
   )

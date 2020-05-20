@@ -112,9 +112,7 @@ export class App extends React.Component<Props> {
           </Card>
           <TaskFormModal
             show={modalShow}
-            onDateChange={() => undefined}
-            onNameChange={() => undefined}
-            // onSave={this.handleOnSave}
+            onSave={this.handleOnSave}
             onHide={this.handleOnModalHide}
           />
         </Col>
